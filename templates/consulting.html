@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href=" {%static '/css/bootstrap.css'%} ">
+    <link rel="stylesheet" href="{%static '/css/imagetext.css'%}">
+    <link rel="stylesheet" href="{%static '/css/style.css'%}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="shortcut icon" type="image/x-icon" href="{%static '/images/symb.jpeg'%}" />
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
+    </script>
+    <link rel="shortcut icon" type="image/x-icon" href="{%static '/images/symb.jpeg'%}" />
+    <title>Consulting</title>
+</head>
+<style>
+    .navbar {
+        position: fixed;
+        z-index: 1000;
+        left: 0;
+        right: 0;
+
+    }
+
+    .content {
+
+        z-index: 2;
+    }
+
+    .clip {
+        border-bottom-right-radius: 50% 15%;
+        border-bottom-left-radius: 50% 15%;
+    }
+
+    .spaceing {
+        letter-spacing: 3px;
+        text-align: center;
+        text-transform: uppercase;
+    }
+
+    .num {
+        border-bottom: 1px solid black;
+        padding: 5px 0px;
+        padding-left: 10px;
+        padding-right: 10px;
+        border-radius: 50%;
+    }
+
+    .col-md-3:hover .num {
+        background-color: rgb(16, 124, 248);
+        color: white;
+        transition-duration: 0.6s;
+    }
+
+    .para {
+        font-size: 14px;
+        color: rgb(94, 94, 94);
+    }
+
+    .showcase {
+        box-shadow: 50px 10px #cac9c9;
+        box-shadow: 0 0 25px 0 rgba(50, 50, 50, .3) inset;
+    }
+
+    .formdiv {
+        background-image: url("{%static '/images/map.jpg'%}") !important;
+        background-repeat: no-repeat;
+        border-radius: 10px;
+        background-size: cover;
+    }
+
+    ul li {
+        text-decoration: none;
+        display: inline;
+
+    }
+
+    ul {
+        padding: 0;
+    }
+
+    .mailto {
+        font-size: 14px;
+        text-decoration: none;
+        text-emphasis: none;
+        color: black;
+    }
+
+    .mailto:hover {
+        text-decoration: none;
+        color: black;
+    }
+
+    .no-arrow {
+        -moz-appearance: textfield;
+    }
+
+    .no-arrow::-webkit-inner-spin-button {
+        display: none;
+    }
+
+    .no-arrow::-webkit-outer-spin-button,
+    .no-arrow::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+
+    .footer-ul li a {
+        text-decoration: none;
+        margin: 0px 10px;
+    }
+
+    .social-media li a {
+        text-decoration: none;
+        margin: 0px 5px;
+    }
+
+    @media only screen and (max-width: 700px) {
+        .remove {
+            display: none;
+        }
+    }
+</style>
+{% if message %}
+<script>
+    alert("{{message}}")
+</script>
+{% endif %}
+
+<body>
+
+    <!-- Image and text -->
+    <header class="navigation fixed-top">
+        <!-- <div class="container"> -->
+        <!-- main nav -->
+        <nav class="navbar navbar-expand-lg navbar-ligh bg-light">
+            <!-- logo -->
+            <a class="navbar-brand d-inline-block align-top " href="{%url 'index'%}">
+                <img class="logo-defau d-none d-lg-block bg-light" src="{%static '/images/symb.jpeg'%}" alt="logo"
+                    style="width: 56%;border-radius: 50%;" />
+            </a>
+            <!-- <a href="" class="d-none d-lg-block ml-auto"><span >SolvingScaleAI</span></a> -->
+            <!-- /logo -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation"
+                aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fa fa-bars" aria-hidden="true"></i>
+
+            </button>
+
+            <div class="collapse navbar-collapse" id="navigation">
+                <ul class="navbar-nav ml-auto text-center camsecdemo">
+                    <a href="{%url 'index'%}"><img class="logo-whi d-lg-none d-sm-block ml-auto mr-auto"
+                            src="{%static '/images/logoblue.png'%}" style="width: 70%;" alt="logo" /></a>
+                    <li class="nav-item ">
+                        <a class="nav-link" href="{%url 'company'%}">Company</a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link" href="{%url 'consulting'%}">Consulting</a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link" href="{%url 'team'%}">Team</a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link" href="{%url 'portfolio'%}">Career</a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link" href="{%url 'contact'%}">Contact</a>
+                    </li>
+
+                </ul>
+            </div>
+        </nav>
+        <!-- /main nav -->
+        <!-- </div> -->
+    </header>
+    <section class="showcase">
+        <div class="video-container clip">
+
+            <img class="" src="{%static '/images/first.jpg'%}" width="100%" alt="">
+
+        </div>
+        <div class="content">
+            <h5 style="color: black;">IT Services Designed For</h5>
+            <h1 style="font-size:7vh;color:black;" data-aos="zoom-out-down">Your Business</h1>
+            <h5 style="color: black;">Highly Tailored IT Design, Development & Security Services.</h5><br><br>
+            <button id="videobtn" class="btn btn-primary" onclick="location.href='#consulation'">
+                FREE CONSULTATION
+            </button>
+
+        </div>
+    </section><br>
+    <div class="text-center">
+        <h2>CONSULT US FOR </h2>
+        <div class="border"></div>
+    </div><br>
+    <div class="container">
+        <div class="row text-center text-white " style="background: #28ABE3; border-radius: 10px;">
+            <div class="col-md-6 my-auto p-5">
+                <i class="fa fa-hospital-o fa-4x" aria-hidden="true"></i><br> <br>
+                <h4>HealthCare</h4>
+                <p class="text-white">Health is wealth!. While technology is getting ubiquitous, and increasing
+                    number of patients in
+                    hospitals, its hard to take care of the patient and staff of the hospitals. We provide a
+                    solution to
+                    overcome this problem.</p>
+            </div>
+            <div class="col-md-6 my-auto p-3">
+                <video style="width:100%; border-radius: 10px;" autoplay loop muted>
+                    <source src="{%static '/images/video3-2.mp4'%}" type="video/mp4">
+                </video>
+            </div>
+        </div>
+        <div class="row my-5 text-center text-white " style="background: #28ABE3; border-radius: 10px;">
+            <div class="col-md-6 my-auto p-3">
+                <video style="width:100%; border-radius: 10px;" autoplay loop muted>
+                    <source src="{%static '/images/vid1.mp4'%}" type="video/mp4">
+                </video>
+            </div>
+            <div class="col-md-6 my-auto p-5">
+                <i class="fa fa-building fa-4x" aria-hidden="true"></i><br> <br>
+                <h4>CONSTRUCTION </h4>
+                <p class="text-white">Compared to all other job sectors, construction has the highest number of
+                    fatal work injuries. Accidents on construction sites cause thousands of on-the-job injuries and
+                    contribute to almost 20 percent of all yearly private industry worker deaths. There are many
+                    factors that contribute to construction site injuries and fatalities. The leading causes of
+                    worker deaths on construction sites are Falls, Getting struck by an object, Electrocution,
+                    Pipefitter Accidents, Equipment failure, etc.</p>
+            </div>
+        </div>
+        <div class="row my-5 text-center text-white " style="background: #28ABE3; border-radius: 10px;">
+            <div class="col-md-6 my-auto p-5">
+                <i class="fa fa-user fa-4x" aria-hidden="true"></i><br> <br>
+                <h4>CUSTOMERISED SERVICES </h4>
+                <p class="text-white">Customer satisfaction has always been the priority!. Satisfaction not only
+                    include the product quality, but also user experience. We always look to provide that
+                    satisfaction. In today's era, user experience is the most important thing matters. We provide an
+                    AI solution to overcome security and retail factors .</p>
+            </div>
+            <div class="col-md-6 my-auto p-3">
+                <video style="width:100%; border-radius: 10px;" autoplay loop muted>
+                    <source src="{%static '/images/vid2.mp4'%}" type="video/mp4">
+                </video>
+            </div>
+        </div>
+        <div class="row my-5 text-center text-white " style="background: #28ABE3; border-radius: 10px;">
+            <div class="col-md-6 my-auto p-3">
+                <i class="fa fa-car fa-4x" aria-hidden="true"></i><br> <br>
+                <h4>AUTOMOBILE </h4>
+                <p class="text-white">Nowadays, more and more professions require long-term concentration. Drivers
+                    must keep a close eye on the road, so they can react to sudden events immediately. Driver
+                    fatigue often becomes a direct cause of many traffic accidents.</p>
+            </div>
+            <div class="col-md-6 my-auto p-3">
+                <i class="fa fa-shopping-cart fa-4x" aria-hidden="true"></i><br> <br>
+                <h4>RETAIL </h4>
+                <p class="text-white">Customer satisfaction has always been the priority!. Satisfaction not only
+                    include the product quality, but also user experience. TDBians always look to provide that
+                    satisfaction. In today's era, user experience is the most important thing matters. We provide an
+                    AI solution to overcome security and retail factors</p>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="container justify-content-center">
+        <div class="formdiv" id="consulation">
+            <div class="row text-center">
+                <div class="col-md-6"><br>
+                    <h1>5.0/5.0</h1>
+                    <ul>
+                        <li><img src="{%static '/images/star.png'%}" alt=""></li>
+                        <li><img src="{%static '/images/star.png'%}" alt=""></li>
+                        <li><img src="{%static '/images/star.png'%}" alt=""></li>
+                        <li><img src="{%static '/images/star.png'%}" alt=""></li>
+                        <li><img src="{%static '/images/star.png'%}" alt=""></li>
+                    </ul>
+                    <h5>by our customers for 20+ clients</h5>
+
+                    <div class="row my-5 ">
+                        <div class="col-2"></div>
+                        <div class="col text-right">
+                            <img src="{%static '/images/gmail.png'%}" alt="">
+                        </div>
+                        <div class="col  text-left">
+                            <h5>SAY HELLO</h5>
+                            <a class="mailto" href="mailto:someone@example.com">tdb@gmail.com</a>
+                        </div>
+                        <div class="col-4"></div>
+                    </div>
+                </div>
+                <div class="col-md-6 my-4 ">
+                    <div class="card mx-auto" style="width:90%">
+
+                        <div class="card-body text-left">
+                            <form action="{%url 'submit'%}" method="POST">
+                                {% csrf_token %}
+                                <div class="form-row">
+                                    <div class="form-group col-md-6">
+
+                                        <input type="text" class="form-control" pattern="^[a-zA-Z ]*$" name="name"
+                                            id="inputEmail4" placeholder="Name*" required>
+                                    </div>
+                                    <div class="form-group col-md-6">
+
+                                        <input type="tel" class="form-control no-arrow" pattern="^[6-9]\d{9}$"
+                                            name="mobile" id="inputPassword4" placeholder="Mobile Number*" required>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+
+                                    <input type="email" class="form-control" id="inputAddress" name="email"
+                                        placeholder="Email*" required>
+                                </div>
+                                <div class="form-group ">
+
+                                    <select id="inputState1" name="inquiry" class="form-control" required>
+                                        <option value="" selected>Your inquiry about</option>
+                                        <option value="Web Development">Web Development</option>
+                                        <option value="Mobile Application">Mobile Application </option>
+                                        <option value="Desktop Software">Desktop Software</option>
+                                        <option value="Digital Marketing">Digital Marketing</option>
+                                    </select>
+                                </div>
+                                <div class="form-group ">
+
+                                    <select id="inputState2" name="pay" class="form-control" required>
+                                        <option value="" selected>I will genuinely pay about:</option>
+                                        <option value="$60 - $500">$60 - $500</option>
+                                        <option value="$500 - $1500">$500 - $1500 </option>
+                                        <option value="$1500 - $3500">$1500 - $3500</option>
+                                        <option value="More than $3500">More than $3500</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+
+                                    <textarea class="form-control" name="need"
+                                        placeholder="Please describe what you need." id="exampleFormControlTextarea1"
+                                        rows="3"></textarea>
+                                </div>
+                                <center><button type="submit" style="padding: 10px;" class="btn btn-primary ">Alright
+                                        it's Done
+                                    </button></center>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+    </div>
+    <footer class="remove">
+        <div class="row" style="margin-left:  0px; margin-right:0px">
+            <div class="col-md-3">
+                <img src="{%static '/images/logoblue.png'%}" width="150" alt="">
+            </div>
+            <div class="col-md-6">
+                <ul class="footer-ul">
+                    <li>
+                        <a href="{%url 'company'%}">Company </a>
+                    </li>
+                    <li>
+                        <a href="{%url 'consulting'%}">Consulting </a>
+                    </li>
+                    <li>
+                        <a href="{%url 'team'%}">Team </a>
+                    </li>
+                    <li>
+                        <a href="{%url 'portfolio'%}">Career </a>
+                    </li>
+                    <li>
+                        <a href="{%url 'contact'%}">Contact </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-md-3">
+
+                <ul class="social-media">
+                    <li><a href="https://www.facebook.com/Solving-Scale-AI-100840541958369"><i class="fa fa-facebook-f"
+                                style="color: rgb(104, 100, 100);"></i></a></li>
+                    <li><a href="https://www.linkedin.com/company/solvingscale-ai/"><i class="fa fa-linkedin"
+                                style="color: rgb(104, 100, 100);"></i></a></li>
+                    <li><a href="https://twitter.com/AiScale"><i class="	fa fa-twitter"
+                                style="color: rgb(104, 100, 100);"></i></a></li>
+                    <li><a href="https://www.instagram.com/solvingscale.ai/"><i class="fa fa-instagram"
+                                style="color: rgb(104, 100, 100);"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+</body>
+<script src="{%static '/js/script.js'%}"></script><script src="{%static '/js/val.js'%}"></script>
+</html>
