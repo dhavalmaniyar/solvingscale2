@@ -124,6 +124,16 @@
         text-decoration: none;
         margin: 0px 5px;
     }
+    .video-container:after {
+        content: '';
+        z-index: 1;
+        height: 100vh;
+        width: 100%;
+        top: 0;
+        left: 0;
+        background: rgba(0, 0, 0, 0.5);
+        position: absolute;
+    }
 
     @media only screen and (max-width: 700px) {
         .remove {
@@ -147,7 +157,7 @@
             <!-- logo -->
             <a class="navbar-brand d-inline-block align-top " href="{%url 'index'%}">
                 <img class="logo-defau d-none d-lg-block bg-light" src="{%static '/images/symb.jpeg'%}" alt="logo"
-                    style="width: 56%;border-radius: 50%;" />
+                    style="width: 40%;border-radius: 50%;" />
             </a>
             <!-- <a href="" class="d-none d-lg-block ml-auto"><span >SolvingScaleAI</span></a> -->
             <!-- /logo -->
@@ -189,10 +199,10 @@
             <img class="" src="{%static '/images/first.jpg'%}" width="100%" alt="">
 
         </div>
-        <div class="content">
-            <h5 style="color: black;">IT Services Designed For</h5>
-            <h1 style="font-size:7vh;color:black;" data-aos="zoom-out-down">Your Business</h1>
-            <h5 style="color: black;">Highly Tailored IT Design, Development & Security Services.</h5><br><br>
+        <div class="content ">
+            <h5>IT Services Designed For</h5>
+            <h1 style="font-size:7vh;" data-aos="zoom-out-down">Your Business</h1>
+            <h5 >Highly Tailored IT Design, Development & Security Services.</h5><br><br>
             <button id="videobtn" class="btn btn-primary" onclick="location.href='#consulation'">
                 FREE CONSULTATION
             </button>
@@ -334,7 +344,7 @@
                                         <option value="RETAIL">RETAIL</option>
                                     </select>
                                 </div>
-                                <div class="form-group ">
+                                <!-- <div class="form-group ">
 
                                     <select id="inputState2" name="pay" class="form-control" required>
                                         <option value="" selected>I will genuinely pay about:</option>
@@ -343,7 +353,7 @@
                                         <option value="$1500 - $3500">$1500 - $3500</option>
                                         <option value="More than $3500">More than $3500</option>
                                     </select>
-                                </div>
+                                </div> -->
                                 <div class="form-group">
 
                                     <textarea class="form-control" name="need"
