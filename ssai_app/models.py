@@ -13,4 +13,14 @@ class Inquiry(models.Model):
     need=models.TextField()
     date=models.DateField(default=timezone.now())
 
+class User(models.Model):
+    user=models.TextField(default=None)
+    def __str__(self):
+        return self.user
+
+class UserCount(models.Model):
+    ucount=models.IntegerField()
+    def __str__(self):
+        return str(self.ucount)
+
 

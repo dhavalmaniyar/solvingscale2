@@ -1,6 +1,7 @@
 from django.shortcuts import render
-from . models import Inquiry
+from . models import Inquiry,User,UserCount
 from django.core.mail import send_mail
+from django.db.models import Q
 # Create your views here.
 
 def index(request):
@@ -10,6 +11,28 @@ def company(request):
     return render(request,'company.html')
 
 def consulting(request):
+    def get_ip(request):
+        address=request.META.get('HTTP_X_FORWARDED_FOR')
+        if address:
+            ip=address.split(',')[-1].strip()
+        else:
+            ip=request.META.get('REMOTE_ADDR')
+        return ip
+    ip=get_ip(request)
+    u=User(user=ip)
+    result=User.objects.filter(Q(user__icontains=ip))
+    if len(result)==1:
+        print("user exist")
+    elif len(result)>1:
+        print("user exist more...")
+    else:
+        u.save()
+        print("user is unique")
+    count=User.objects.all().count()
+
+    datacount=UserCount.objects.get(id=count)
+    datacount.ucount=count
+    datacount.save()  
     return render(request,'consulting.html')
 
 def portfolio(request):
