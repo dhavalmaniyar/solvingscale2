@@ -1,7 +1,9 @@
 from django.shortcuts import render
-from . models import Inquiry,User,UserCount
+from . models import Inquiry,User,UserCount,Snippet
 from django.core.mail import send_mail
 from django.db.models import Q
+from django.shortcuts import get_object_or_404
+from django.http import HttpResponse
 # Create your views here.
 
 def index(request):
@@ -61,3 +63,8 @@ def submit(request):
     send_mail(subject, 
             message,'infosolvingscale@gmail.com', ['infosolvingscale@gmail.com'], fail_silently = False)
     return render(request,'consulting.html',{'message':"Thank You, we will contact you soon"})
+
+
+def snippet_detail(request, slug):
+    snippet = get_object_or_404(Snippet, slug=slug)
+    return HttpResponse(f'the detailview for slug of {slug}')
