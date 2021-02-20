@@ -21,6 +21,7 @@ def consulting(request):
     ip=get_ip(request)
     u=User(user=ip)
     result=User.objects.filter(Q(user__icontains=ip))
+    print("EEEEEEEEEEEERRRR",result)
     if len(result)==1:
         print("user exist")
     elif len(result)>1:
@@ -30,9 +31,10 @@ def consulting(request):
         print("user is unique")
     count=User.objects.all().count()
 
-    datacount=UserCount.objects.get(id=count)
+    datacount=UserCount.objects.get(id=1)
     datacount.ucount=count
     datacount.save()  
+    print("count ????????",count)
     return render(request,'consulting.html')
 
 def portfolio(request):
