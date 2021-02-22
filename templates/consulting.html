@@ -141,6 +141,15 @@
             display: none;
         }
     }
+    .grow{
+        transition: box-shadow 0.5s ease-in-out
+    }
+    .grow:hover {
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.8);
+        
+      }
+
+    
 </style>
 {% if message %}
 <script>
@@ -157,7 +166,7 @@
         <nav class="navbar navbar-expand-lg navbar-ligh bg-light">
             <!-- logo -->
             <a class="navbar-brand d-inline-block align-top " href="{%url 'index'%}">
-                <img class="logo-defau d-none d-lg-block bg-light" src="{%static '/images/symb.jpeg'%}" alt="logo"
+                <img class="logo-defau d-none d-lg-block bg-light" src="{%static '/images/symb.jpeg'%}" alt="solvingscale.ai" title="solvingscale.ai" 
                     style="width: 40%;border-radius: 50%;" />
             </a>
             <!-- <a href="" class="d-none d-lg-block ml-auto"><span >SolvingScaleAI</span></a> -->
@@ -171,7 +180,7 @@
             <div class="collapse navbar-collapse" id="navigation">
                 <ul class="navbar-nav ml-auto text-center camsecdemo">
                     <a href="{%url 'index'%}"><img class="logo-whi d-lg-none d-sm-block ml-auto mr-auto"
-                            src="{%static '/images/logoblue.png'%}" style="width: 70%;" alt="logo" /></a>
+                            src="{%static '/images/logoblue.png'%}" style="width: 70%;" alt="solvingscale.ai" /></a>
                     <li class="nav-item ">
                         <a class="nav-link" href="{%url 'company'%}">Company</a>
                     </li>
@@ -197,7 +206,7 @@
     <section class="showcase">
         <div class="video-container clip">
 
-            <img class="" src="{%static '/images/first.jpg'%}" width="100%" alt="">
+            <img class="" src="{%static '/images/first.jpg'%}" width="100%" alt="solvingscale.ai banner">
 
         </div>
         <div class="content ">
@@ -216,7 +225,7 @@
         <div class="border"></div>
     </div><br>
     <div class="container">
-        <div class="row text-center text-white " style="background: #28ABE3; border-radius: 10px;">
+        <div class="row text-center text-white grow " style="background: #28ABE3; border-radius: 10px;">
             <div class="col-md-6 my-auto p-5">
                 <i class="fa fa-hospital-o fa-4x" aria-hidden="true"></i><br> <br>
                 <h4>HEALTHCARE</h4>
@@ -233,7 +242,7 @@
                 </video>
             </div>
         </div>
-        <div class="row my-5 text-center text-white " style="background: #28ABE3; border-radius: 10px;">
+        <div class="row my-5 text-center text-white grow" style="background: #28ABE3; border-radius: 10px;">
             <div class="col-md-6 my-auto p-3">
                 <video style="width:100%; border-radius: 10px;" autoplay loop muted>
                     <source src="{%static '/images/vid1.webm'%}" type="video/webm">
@@ -251,7 +260,7 @@
                     Pipefitter Accidents, Equipment failure, etc.</p>
             </div>
         </div>
-        <div class="row my-5 text-center text-white " style="background: #28ABE3; border-radius: 10px;">
+        <div class="row my-5 text-center text-white grow " style="background: #28ABE3; border-radius: 10px;">
             <div class="col-md-6 my-auto p-5">
                 <i class="fa fa-shopping-cart fa-4x" aria-hidden="true"></i><br> <br>
                 <h4>RETAIL </h4>
@@ -267,7 +276,7 @@
                 </video>
             </div>
         </div>
-        <div class="row my-5 text-center text-white " style="background: #28ABE3; border-radius: 10px;">
+        <div class="row my-5 text-center text-white grow " style="background: #28ABE3; border-radius: 10px;">
             <div class="col-md-6 my-auto p-3">
                 <i class="fa fa-car fa-4x" aria-hidden="true"></i><br> <br>
                 <h4>AUTOMOBILE </h4>
@@ -294,18 +303,18 @@
                 <div class="col-md-6"><br>
                     <h1>5.0/5.0</h1>
                     <ul>
-                        <li><img src="{%static '/images/star.png'%}" alt=""></li>
-                        <li><img src="{%static '/images/star.png'%}" alt=""></li>
-                        <li><img src="{%static '/images/star.png'%}" alt=""></li>
-                        <li><img src="{%static '/images/star.png'%}" alt=""></li>
-                        <li><img src="{%static '/images/star.png'%}" alt=""></li>
+                        <li><img src="{%static '/images/star.png'%}" alt="solvingscale.ai rating"></li>
+                        <li><img src="{%static '/images/star.png'%}" alt="solvingscale.ai rating"></li>
+                        <li><img src="{%static '/images/star.png'%}" alt="solvingscale.ai rating"></li>
+                        <li><img src="{%static '/images/star.png'%}" alt="solvingscale.ai rating"></li>
+                        <li><img src="{%static '/images/star.png'%}" alt="solvingscale.ai rating"></li>
                     </ul>
                     <h5>by our customers for 20+ clients</h5>
 
                     <div class="row my-5 ">
                         <div class="col-1"></div>
                         <div class="col text-right">
-                            <img src="{%static '/images/gmail.png'%}" alt="">
+                            <img src="{%static '/images/gmail.png'%}" alt="solvingscale.ai gmail">
                         </div>
                         <div class="col-7  text-left">
                             <h5>SAY HELLO</h5>
@@ -379,7 +388,7 @@
     <footer class="remove">
         <div class="row" style="margin-left:  0px; margin-right:0px">
             <div class="col-md-3">
-                <img src="{%static '/images/logoblue.png'%}" width="150" alt="">
+                <img src="{%static '/images/logoblue.png'%}" width="150" alt="solvingscale.ai">
             </div>
             <div class="col-md-6">
                 <ul class="footer-ul">
