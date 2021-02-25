@@ -6,6 +6,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Keywords"
+        content="AI Solutions, AI in Healthcare, AI in Construction, AI in Retail, AI in Automobile, AI in Customerised Services ">
     <link rel="stylesheet" href=" {%static '/css/bootstrap.css'%} ">
     <link rel="stylesheet" href="{%static '/css/imagetext.css'%}">
     <link rel="stylesheet" href="{%static '/css/style.css'%}">
@@ -21,7 +23,11 @@
         integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
     </script>
     <link rel="shortcut icon" type="image/x-icon" href="{%static '/images/symb.jpeg'%}" />
+    <link rel="stylesheet" href="{%static '/css/aos.css'%}">
     <title>Consulting</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 <style>
     .navbar {
@@ -29,7 +35,12 @@
         z-index: 1000;
         left: 0;
         right: 0;
+        padding: 0px;
 
+    }
+
+    .navbar-brand {
+        padding: 0px 10px;
     }
 
     .content {
@@ -73,10 +84,11 @@
     }
 
     .formdiv {
-        background-image: url("{%static '/images/map.jpg'%}") !important;
+        /* background-image: url("{%static '/images/map.jpg'%}") !important;*/
         background-repeat: no-repeat;
         border-radius: 10px;
         background-size: cover;
+        background-color: rgb(241, 241, 241);
     }
 
     ul li {
@@ -141,15 +153,15 @@
             display: none;
         }
     }
-    .grow{
+
+    .grow {
         transition: box-shadow 0.5s ease-in-out
     }
+
     .grow:hover {
         box-shadow: 0 5px 15px rgba(0, 0, 0, 0.8);
-        
-      }
 
-    
+    }
 </style>
 {% if message %}
 <script>
@@ -166,8 +178,8 @@
         <nav class="navbar navbar-expand-lg navbar-ligh bg-light">
             <!-- logo -->
             <a class="navbar-brand d-inline-block align-top " href="{%url 'index'%}">
-                <img class="logo-defau d-none d-lg-block bg-light" src="{%static '/images/symb.jpeg'%}" alt="solvingscale.ai" title="solvingscale.ai" 
-                    style="width: 40%;border-radius: 50%;" />
+                <img class="logo-defau d-none d-lg-block bg-light" src="{%static '/images/symb.jpeg'%}"
+                    alt="solvingscale.ai" title="solvingscale.ai" style="width: 35%;border-radius: 50%;" />
             </a>
             <!-- <a href="" class="d-none d-lg-block ml-auto"><span >SolvingScaleAI</span></a> -->
             <!-- /logo -->
@@ -206,30 +218,36 @@
     <section class="showcase">
         <div class="video-container clip">
 
-            <img class="" src="{%static '/images/first.jpg'%}" width="100%" alt="solvingscale.ai banner">
+            <img class="" src="{%static '/images/solvingscale_consulting.gif'%}" width="100%"
+                alt="solvingscale.ai banner">
 
         </div>
         <div class="content ">
-            <h4>AI Solutions For</h4>
-            <h1 style="font-size:7vh;" data-aos="zoom-out-down">Your Business</h1>
+            <h4 style="font-family: 'Josefin Sans', sans-serif;" data-aos="fade-down" data-aos-duration="1000">AI
+                Solutions For</h4>
+            <h1 style="font-size:7vh; font-family: 'Josefin Sans', sans-serif;" data-aos="zoom-in"
+                data-aos-duration="2000">Your Business</h1>
             <!-- <h5 >Highly Tailored IT Design, Development & Security Services.</h5><br><br> -->
-            <button id="videobtn" class="btn btn-primary" onclick="location.href='#consulation'">
-                FREE CONSULTATION
+            <button id="videobtn" class="btn btn-primary"
+                style="background: linear-gradient(to right, #0066ff 0%, #ff99cc 100%);font-family: 'Josefin Sans', sans-serif;">
+                Free Consultation
             </button>
 
         </div>
     </section><br>
 
     <div class="text-center">
-        <h2>CONSULT US FOR </h2>
+        <h2 data-aos="fade-down">CONSULT US FOR </h2>
         <div class="border"></div>
     </div><br>
     <div class="container">
-        <div class="row text-center text-white grow " style="background: #28ABE3; border-radius: 10px;">
+        <div class="row text-center text-white grow "
+            style="background: linear-gradient(to right, #3366ff 0%, #ff99cc 100%); border-radius: 10px;">
             <div class="col-md-6 my-auto p-5">
-                <i class="fa fa-hospital-o fa-4x" aria-hidden="true"></i><br> <br>
-                <h4>HEALTHCARE</h4>
-                <p class="text-white">Health is wealth!. While technology is getting ubiquitous, and increasing
+                <i class="fa fa-hospital-o fa-4x" data-aos="fade-down" aria-hidden="true"></i><br> <br>
+                <h4 data-aos="zoom-in" data-aos-duration="1000">HEALTHCARE</h4>
+                <p class="text-white" data-aos="flip-right" data-aos-duration="1000">Health is wealth!. While technology
+                    is getting ubiquitous, and increasing
                     number of patients in
                     hospitals, its hard to take care of the patient and staff of the hospitals. We provide a
                     solution to
@@ -242,7 +260,8 @@
                 </video>
             </div>
         </div>
-        <div class="row my-5 text-center text-white grow" style="background: #28ABE3; border-radius: 10px;">
+        <div class="row my-5 text-center text-white grow"
+            style="background: linear-gradient(to right, #3366ff 0%, #ff99cc 100%); border-radius: 10px;">
             <div class="col-md-6 my-auto p-3">
                 <video style="width:100%; border-radius: 10px;" autoplay loop muted>
                     <source src="{%static '/images/vid1.webm'%}" type="video/webm">
@@ -250,9 +269,10 @@
                 </video>
             </div>
             <div class="col-md-6 my-auto p-5">
-                <i class="fa fa-building fa-4x" aria-hidden="true"></i><br> <br>
-                <h4>CONSTRUCTION </h4>
-                <p class="text-white">Compared to all other job sectors, construction has the highest number of
+                <i class="fa fa-building fa-4x" data-aos="fade-down" aria-hidden="true"></i><br> <br>
+                <h4 data-aos="zoom-in" data-aos-duration="1000">CONSTRUCTION </h4>
+                <p class="text-white" data-aos="flip-left" data-aos-duration="1000">Compared to all other job sectors,
+                    construction has the highest number of
                     fatal work injuries. Accidents on construction sites cause thousands of on-the-job injuries and
                     contribute to almost 20 percent of all yearly private industry worker deaths. There are many
                     factors that contribute to construction site injuries and fatalities. The leading causes of
@@ -260,11 +280,13 @@
                     Pipefitter Accidents, Equipment failure, etc.</p>
             </div>
         </div>
-        <div class="row my-5 text-center text-white grow " style="background: #28ABE3; border-radius: 10px;">
+        <div class="row my-5 text-center text-white grow "
+            style="background: linear-gradient(to right, #3366ff 0%, #ff99cc 100%); border-radius: 10px;">
             <div class="col-md-6 my-auto p-5">
-                <i class="fa fa-shopping-cart fa-4x" aria-hidden="true"></i><br> <br>
-                <h4>RETAIL </h4>
-                <p class="text-white">Customer satisfaction has always been the priority!. Satisfaction not only
+                <i class="fa fa-shopping-cart fa-4x" data-aos="fade-down" aria-hidden="true"></i><br> <br>
+                <h4 data-aos="zoom-in" data-aos-duration="1000">RETAIL </h4>
+                <p class="text-white" data-aos="flip-right" data-aos-duration="1000">Customer satisfaction has always
+                    been the priority!. Satisfaction not only
                     include the product quality, but also user experience. We always look to provide that
                     satisfaction. In today's era, user experience is the most important thing matters. We provide an
                     AI solution to overcome security and retail factors .</p>
@@ -276,19 +298,22 @@
                 </video>
             </div>
         </div>
-        <div class="row my-5 text-center text-white grow " style="background: #28ABE3; border-radius: 10px;">
+        <div class="row my-5 text-center text-white grow "
+            style="background: linear-gradient(to right, #3366ff 0%, #ff99cc 100%); border-radius: 10px;">
             <div class="col-md-6 my-auto p-3">
-                <i class="fa fa-car fa-4x" aria-hidden="true"></i><br> <br>
-                <h4>AUTOMOBILE </h4>
-                <p class="text-white">Nowadays, more and more professions require long-term concentration. Drivers
+                <i class="fa fa-car fa-4x" data-aos="fade-down" aria-hidden="true"></i><br> <br>
+                <h4 data-aos="zoom-in" data-aos-duration="1000">AUTOMOBILE </h4>
+                <p class="text-white" data-aos="flip-up" data-aos-duration="1000">Nowadays, more and more professions
+                    require long-term concentration. Drivers
                     must keep a close eye on the road, so they can react to sudden events immediately. Driver
                     fatigue often becomes a direct cause of many traffic accidents.</p>
             </div>
             <div class="col-md-6 my-auto p-3">
 
-                <i class="fa fa-user fa-4x" aria-hidden="true"></i><br> <br>
-                <h4>CUSTOMERISED SERVICES </h4>
-                <p class="text-white">Customer satisfaction has always been the priority!. Satisfaction not only
+                <i class="fa fa-user fa-4x" data-aos="fade-down" aria-hidden="true"></i><br> <br>
+                <h4 data-aos="zoom-in" data-aos-duration="1000">CUSTOMERISED SERVICES </h4>
+                <p class="text-white" data-aos="flip-up" data-aos-duration="1000">Customer satisfaction has always been
+                    the priority!. Satisfaction not only
                     include the product quality, but also user experience. TDBians always look to provide that
                     satisfaction. In today's era, user experience is the most important thing matters. We provide an
                     AI solution to overcome security and retail factors</p>
@@ -296,12 +321,15 @@
         </div>
 
     </div>
-
+    <div class="text-center" data-aos="fade-down">
+        <img src="{%static '/images/send.png'%}" alt="solvingscale.ai contact us">
+        <h3 style="color: #0066ff;">We’ll happily answer your questions.</h3>
+    </div>
     <div class="container justify-content-center">
-        <div class="formdiv" id="consulation">
+        <div class="formdiv second" id="consulation">
             <div class="row text-center">
-                <div class="col-md-6"><br>
-                    <h1>5.0/5.0</h1>
+                <div class="col-md-6 my-auto"><br>
+                    <!-- <h1>5.0/5.0</h1>
                     <ul>
                         <li><img src="{%static '/images/star.png'%}" alt="solvingscale.ai rating"></li>
                         <li><img src="{%static '/images/star.png'%}" alt="solvingscale.ai rating"></li>
@@ -309,7 +337,7 @@
                         <li><img src="{%static '/images/star.png'%}" alt="solvingscale.ai rating"></li>
                         <li><img src="{%static '/images/star.png'%}" alt="solvingscale.ai rating"></li>
                     </ul>
-                    <h5>by our customers for 20+ clients</h5>
+                    <h5>by our 20+ clients</h5> -->
 
                     <div class="row my-5 ">
                         <div class="col-1"></div>
@@ -319,6 +347,17 @@
                         <div class="col-7  text-left">
                             <h5>SAY HELLO</h5>
                             <a class="mailto" href="mailto:someone@example.com">hello@solvingscale.ai</a>
+                        </div>
+                        <div class="col-4"></div>
+                    </div>
+                    <div class="row my-5 ">
+                        <div class="col-1"></div>
+                        <div class="col text-right">
+                            <img src="{%static '/images/phone-call.png'%}" alt="solvingscale.ai phonecall">
+                        </div>
+                        <div class="col-7  text-left">
+
+                            <a class="mailto" href="tel:7507898930">+91-7507898930</a>
                         </div>
                         <div class="col-4"></div>
                     </div>
@@ -374,7 +413,9 @@
                                         placeholder="Please describe what you need." id="exampleFormControlTextarea1"
                                         rows="3"></textarea>
                                 </div>
-                                <center><button type="submit" style="padding: 10px;" class="btn btn-primary ">Alright
+                                <center><button type="submit"
+                                        style="padding: 10px; background: linear-gradient(to right, #0066ff 0%, #ff99cc 100%);"
+                                        class="btn btn-primary ">Alright
                                         it's Done
                                     </button></center>
                             </form>
@@ -427,5 +468,15 @@
 </body>
 <script src="{%static '/js/script.js'%}"></script>
 <script src="{%static '/js/val.js'%}"></script>
+<script src="{%static '/js/aos.js'%}"></script>
+<script>
+    $("#videobtn").click(function () {
+        $('html,body').animate({
+                scrollTop: $(".second").offset().top
+            },
+            'slow');
+    });
+    AOS.init();
+</script>
 
 </html>
