@@ -2406,9 +2406,9 @@ a:focus, a:hover {
   }
 }
 
-*{
+/* *{
   font-family: 'Josefin Sans', sans-serif !important;
-}
+} */
 
 .services-border{
   border-left: 3px solid;padding:10px; border-image: 

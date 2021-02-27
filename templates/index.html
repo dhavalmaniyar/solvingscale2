@@ -45,6 +45,8 @@
 	<!-- Global site tag (gtag.js) - Google Analytics -->
 	<!-- <link rel="stylesheet" href="{%static '/css/style.css'%}"> -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=G-LVV5M06YY7"></script>
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet">
 	<script>
 		window.dataLayer = window.dataLayer || [];
 
@@ -56,6 +58,9 @@
 		gtag('config', 'G-LVV5M06YY7');
 	</script>
 	<style>
+		*{
+			font-family: 'Josefin Sans', sans-serif;
+		}
 		.video-container:after {
 			content: '';
 			z-index: 1;
@@ -68,11 +73,12 @@
 			clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)
 		}
 
-		.navbar{
+		.navbar {
 			position: fixed;
 			left: 0;
 			right: 0;
 		}
+
 		.video-container video {
 			min-width: 100%;
 			min-height: 100%;
@@ -84,6 +90,27 @@
 			object-fit: cover;
 		}
 
+		.footer-ul li {
+			text-decoration: none;
+			display: inline;
+		}
+
+		.footer-ul li a {
+			text-decoration: none;
+			margin: 0px 10px;
+		}
+
+		.social-media li {
+			text-decoration: none;
+			display: inline;
+		}
+
+		.social-media li a {
+			text-decoration: none;
+			margin: 0px 5px;
+
+		}
+
 		.navigation .navbar-light .navbar-nav .nav-item .nav-link {
 			color: #fff;
 			font-size: 14px;
@@ -93,13 +120,16 @@
 			letter-spacing: 1px;
 			transition: .2s ease-in-out 0s;
 		}
+
 		@media only screen and (max-width: 700px) {
 			.remove {
 				display: none;
 			}
-			.navbar-light{
+
+			.navbar-light {
 				background-color: white;
 			}
+
 			.navigation .navbar-light .navbar-nav .nav-item .nav-link {
 				color: black;
 				font-size: 14px;
@@ -109,7 +139,7 @@
 				letter-spacing: 1px;
 				transition: .2s ease-in-out 0s;
 			}
-			
+
 		}
 	</style>
 </head>
@@ -217,59 +247,45 @@ End Fixed Navigation
 
 
 	</section>
-
-
-	<footer id="footer" class="bg-one">
-
-
-		<nav class="navbar navbar-expand-lg navbar-light bg-light sticky-bottom">
-			<a class="navbar-brand" href="#">
-
-				<img class="logo-defau d-none d-lg-block bg-light" src="{%static '/images/logoblue.png'%}" alt="logo"
-					width="150" height="30" class="d-inline-block align-top" alt="" loading="lazy" />
-			</a>
-			<div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-				<!-- <a class="navbar-brand" href="#">Hidden brand</a> -->
-				<ul class="navbar-nav mr-auto mt-2 mt-lg-0 ml-auto">
-					<li class="nav-item active">
-						<a class="nav-link" href="{%url 'company'%}">Company </a>
+<br>
+	<footer class="remove">
+		<div class="row" style="margin-left:  0px; margin-right:0px">
+			<div class="col-md-3">
+				<img src="{%static '/images/logoblue.png'%}" width="150" alt="solvingscale.ai">
+			</div>
+			<div class="col-md-6">
+				<ul class="footer-ul">
+					<li>
+						<a href="{%url 'company'%}">Company </a>
 					</li>
-					<li class="nav-item active">
-						<a class="nav-link" href="{%url 'consulting'%}">Consulting </a>
+					<li>
+						<a href="{%url 'consulting'%}">Consulting </a>
 					</li>
-					<li class="nav-item active">
-						<a class="nav-link" href="{%url 'team'%}">Team </a>
+					<li>
+						<a href="{%url 'team'%}">Team </a>
 					</li>
-					<li class="nav-item active">
-						<a class="nav-link" href="{%url 'portfolio'%}">Career </a>
+					<li>
+						<a href="{%url 'portfolio'%}">Career </a>
 					</li>
-					<li class="nav-item active">
-						<a class="nav-link" href="{%url 'contact'%}">Contact </a>
+					<li>
+						<a href="{%url 'contact'%}">Contact </a>
 					</li>
-					<!-- <li class="nav-item active">
-				<a class="nav-link" href="#">SignIn </a>
-			  </li> -->
-				</ul>
-				<ul class="navbar-nav mt-2 mt-lg-0 ml-auto">
-					<li class="nav-item ">
-						<a class="nav-link" href="https://www.facebook.com/Solving-Scale-AI-100840541958369"><i
-								class="fa fa-facebook-f"></i></a>
-					</li>
-					<li class="nav-item ">
-						<a class="nav-link" href="https://www.linkedin.com/company/solvingscale-ai/"><i
-								class="fa fa-linkedin"></i></a>
-					</li>
-					<li class="nav-item ">
-						<a class="nav-link" href="https://twitter.com/AiScale"><i class="fa fa-twitter"></i></a>
-					</li>
-					<li class="nav-item ">
-						<a class="nav-link" href="https://www.instagram.com/solvingscale.ai/"><i
-								class="	fa fa-instagram"></i></a>
-					</li>
-
 				</ul>
 			</div>
-		</nav>
+			<div class="col-md-3">
+
+				<ul class="social-media">
+					<li><a href="https://www.facebook.com/Solving-Scale-AI-100840541958369"><i class="fa fa-facebook-f"
+								style="color: rgb(104, 100, 100);"></i></a></li>
+					<li><a href="https://www.linkedin.com/company/solvingscale-ai/"><i class="fa fa-linkedin"
+								style="color: rgb(104, 100, 100);"></i></a></li>
+					<li><a href="https://twitter.com/AiScale"><i class="	fa fa-twitter"
+								style="color: rgb(104, 100, 100);"></i></a></li>
+					<li><a href="https://www.instagram.com/solvingscale.ai/"><i class="fa fa-instagram"
+								style="color: rgb(104, 100, 100);"></i></a></li>
+				</ul>
+			</div>
+		</div>
 	</footer>
 
 
