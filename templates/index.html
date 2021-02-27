@@ -28,21 +28,22 @@
 	<!-- CSS
   ================================================== -->
 	<!-- Themefisher Icon font -->
-	<link rel="stylesheet" href="{%static '/plugins/themefisher-font/style.css'%}">
+	<!-- <link rel="stylesheet" href="{%static '/plugins/themefisher-font/style.css'%}"> -->
 	<!-- bootstrap.min css -->
-	<link rel="stylesheet" href="{%static '/plugins/bootstrap/css/bootstrap.min.css'%}">
+	<!-- <link rel="stylesheet" href="{%static '/plugins/bootstrap/css/bootstrap.min.css'%}"> -->
 	<!-- Lightbox.min css -->
-	<link rel="stylesheet" href="{%static '/plugins/lightbox2/dist/css/lightbox.min.css'%}">
+	<!-- <link rel="stylesheet" href="{%static '/plugins/lightbox2/dist/css/lightbox.min.css'%}"> -->
 	<!-- animation css -->
-	<link rel="stylesheet" href="{%static '/plugins/animate/animate.css'%}">
+	<!-- <link rel="stylesheet" href="{%static '/plugins/animate/animate.css'%}"> -->
 	<!-- Slick Carousel -->
-	<link rel="stylesheet" href="{%static '/plugins/slick/slick.css'%}">
+	<!-- <link rel="stylesheet" href="{%static '/plugins/slick/slick.css'%}"> -->
 	<!-- Main Stylesheet -->
-	<link rel="stylesheet" href="{%static '/css/style.css'%}">
+	<link rel="stylesheet" href="{%static '/css/bootstrap.css'%}">
 	<link rel="stylesheet" href="{%static '/css/imagetext.css'%}">
 	<!-- font icon -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<!-- <link rel="stylesheet" href="{%static '/css/style.css'%}"> -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=G-LVV5M06YY7"></script>
 	<script>
 		window.dataLayer = window.dataLayer || [];
@@ -67,6 +68,11 @@
 			clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)
 		}
 
+		.navbar{
+			position: fixed;
+			left: 0;
+			right: 0;
+		}
 		.video-container video {
 			min-width: 100%;
 			min-height: 100%;
@@ -77,7 +83,34 @@
 			transform: translate(-50%, -50%);
 			object-fit: cover;
 		}
-		
+
+		.navigation .navbar-light .navbar-nav .nav-item .nav-link {
+			color: #fff;
+			font-size: 14px;
+			line-height: 26px;
+			padding: 20px 15px;
+			text-transform: uppercase;
+			letter-spacing: 1px;
+			transition: .2s ease-in-out 0s;
+		}
+		@media only screen and (max-width: 700px) {
+			.remove {
+				display: none;
+			}
+			.navbar-light{
+				background-color: white;
+			}
+			.navigation .navbar-light .navbar-nav .nav-item .nav-link {
+				color: black;
+				font-size: 14px;
+				line-height: 26px;
+				padding: 8px 15px;
+				text-transform: uppercase;
+				letter-spacing: 1px;
+				transition: .2s ease-in-out 0s;
+			}
+			
+		}
 	</style>
 </head>
 
@@ -113,7 +146,7 @@ Fixed Navigation
 				<!-- logo -->
 				<a class="navbar-brand d-inline-block align-top " href="{%url 'index'%}">
 					<img class="logo-defau d-none d-lg-block bg-light" src="{%static '/images/symb.jpeg'%}" alt="logo"
-						style="width: 56%;border-radius: 50%;" title="solvingscale.ai"/>
+						style="width: 56%;border-radius: 50%;" title="solvingscale.ai" />
 				</a>
 				<!-- <a href="" class="d-none d-lg-block ml-auto"><span >SolvingScaleAI</span></a> -->
 				<!-- /logo -->
@@ -227,7 +260,7 @@ End Fixed Navigation
 								class="fa fa-linkedin"></i></a>
 					</li>
 					<li class="nav-item ">
-						<a class="nav-link" href="https://twitter.com/AiScale"><i class="	fa fa-twitter"></i></a>
+						<a class="nav-link" href="https://twitter.com/AiScale"><i class="fa fa-twitter"></i></a>
 					</li>
 					<li class="nav-item ">
 						<a class="nav-link" href="https://www.instagram.com/solvingscale.ai/"><i

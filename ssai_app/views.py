@@ -68,3 +68,18 @@ def submit(request):
 def snippet_detail(request, slug):
     snippet = get_object_or_404(Snippet, slug=slug)
     return HttpResponse(f'the detailview for slug of {slug}')
+
+def healthcare(request):
+    return render(request,'healthcare.html')
+
+def construction(request):
+    return render(request,'construction.html')
+
+def retail(request):
+    return render(request,'retail.html')
+
+def automobile(request):
+    return render(request,'automobile.html')
+
+def smartcity(request):
+    return render(request,'customize.html')

@@ -6,11 +6,14 @@
 <html>
 <!--<![endif]-->
 {% load static %}
+
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-	<meta name="title" content="Our Team | Solving Scale AI" >
-	<meta name="description" content="Our Team comes from diverse educational and professional backgrounds from prestigious institutes around the world to leading corporate and startups.">
-<meta name="keywords" content="Our team, team solving scale.ai , Ai consulting services, deep learning, computer vision company">
+	<meta name="title" content="Our Team | Solving Scale AI">
+	<meta name="description"
+		content="Our Team comes from diverse educational and professional backgrounds from prestigious institutes around the world to leading corporate and startups.">
+	<meta name="keywords"
+		content="Our team, team solving scale.ai , Ai consulting services, deep learning, computer vision company">
 	<meta name="author" content="solvingscaleAi">
 
 	<title>Solving Scale AI</title>
@@ -26,41 +29,76 @@
 	<!-- CSS
   ================================================== -->
 	<!-- Themefisher Icon font -->
-	<link rel="stylesheet" href="{%static '/plugins/themefisher-font/style.css'%}">
+	<!-- <link rel="stylesheet" href="{%static '/plugins/themefisher-font/style.css'%}"> -->
 	<!-- bootstrap.min css -->
-	<link rel="stylesheet" href="{%static '/plugins/bootstrap/css/bootstrap.min.css'%}">
+	<!-- <link rel="stylesheet" href="{%static '/plugins/bootstrap/css/bootstrap.min.css'%}"> -->
 	<!-- Lightbox.min css -->
-	<link rel="stylesheet" href="{%static '/plugins/lightbox2/dist/css/lightbox.min.css'%}">
+	<!-- <link rel="stylesheet" href="{%static '/plugins/lightbox2/dist/css/lightbox.min.css'%}"> -->
 	<!-- animation css -->
-	<link rel="stylesheet" href="{%static '/plugins/animate/animate.css'%}">
+	<!-- <link rel="stylesheet" href="{%static '/plugins/animate/animate.css'%}"> -->
 	<!-- Slick Carousel -->
-	<link rel="stylesheet" href="{%static '/plugins/slick/slick.css'%}">
+	<!-- <link rel="stylesheet" href="{%static '/plugins/slick/slick.css'%}"> -->
 	<!-- Main Stylesheet -->
-	<link rel="stylesheet" href="{%static '/css/style.css'%}">
+	<!-- <link rel="stylesheet" href="{%static '/css/style.css'%}"> -->
+	<link rel="stylesheet" href="{%static '/css/bootstrap.css'%}">
 	<!-- font icon -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-LVV5M06YY7"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-LVV5M06YY7"></script>
+	<link rel="stylesheet" href="{%static '/css/aos.css'%}">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet">
+	<script>
+		window.dataLayer = window.dataLayer || [];
 
-  gtag('config', 'G-LVV5M06YY7');
-</script>
-<style>
-	.navbar {
-        position: fixed;
-        z-index: 1000;
-        left: 0;
-        right: 0;
-        padding: 0px;
+		function gtag() {
+			dataLayer.push(arguments);
+		}
+		gtag('js', new Date());
 
-    }
-    .navbar-brand{
-        padding: 0px 10px;
-    }	
-</style>
+		gtag('config', 'G-LVV5M06YY7');
+	</script>
+	<style>
+		* {
+			font-family: 'Josefin Sans', sans-serif;
+		}
+
+		.navbar {
+			position: fixed;
+			z-index: 1000;
+			left: 0;
+			right: 0;
+			padding: 0px;
+		}
+
+		.navbar-brand {
+			padding: 0px 10px;
+		}
+
+		.footer-ul li a {
+			text-decoration: none;
+			margin: 0px 10px;
+		}
+
+		.social-media li a {
+			text-decoration: none;
+			margin: 0px 5px;
+		}
+
+		ul li {
+			text-decoration: none;
+			display: inline;
+
+		}
+
+		@media only screen and (max-width: 700px) {
+			.remove {
+				display: none;
+			}
+		}
+
+		.company-gallery {}
+	</style>
 </head>
 
 <body id="body">
@@ -90,50 +128,51 @@ Fixed Navigation
 ==================================== -->
 	<header class="navigation fixed-top">
 		<!-- <div class="container"> -->
-			<!-- main nav -->
-			<nav class="navbar navbar-expand-lg navbar-ligh bg-light">
-				<!-- logo -->
-				<a class="navbar-brand d-inline-block align-top " href="{%url 'index'%}">
-					<img class="logo-defau d-none d-lg-block bg-light" src="{%static '/images/symb.jpeg'%}" alt="solvingscale.ai" title="solvingscale.ai" style="width: 40%;border-radius: 50%;" />
-				</a>
-				<!-- <a href="" class="d-none d-lg-block ml-auto"><span >SolvingScaleAI</span></a> -->
-				<!-- /logo -->
-				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation"
-					aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
-					<i class="fa fa-bars" aria-hidden="true"></i>
+		<!-- main nav -->
+		<nav class="navbar navbar-expand-lg navbar-ligh bg-light">
+			<!-- logo -->
+			<a class="navbar-brand d-inline-block align-top " href="{%url 'index'%}">
+				<img class="logo-defau d-none d-lg-block bg-light" src="{%static '/images/symb.jpeg'%}"
+					alt="solvingscale.ai" title="solvingscale.ai" style="width: 40%;border-radius: 50%;" />
+			</a>
+			<!-- <a href="" class="d-none d-lg-block ml-auto"><span >SolvingScaleAI</span></a> -->
+			<!-- /logo -->
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation"
+				aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
+				<i class="fa fa-bars" aria-hidden="true"></i>
 
-				</button>
+			</button>
 
-				<div class="collapse navbar-collapse" id="navigation">
-					<ul class="navbar-nav ml-auto text-center camsecdemo">
-						<a href="{%url 'index'%}"><img class="logo-whi d-lg-none d-sm-block ml-auto mr-auto"
+			<div class="collapse navbar-collapse" id="navigation">
+				<ul class="navbar-nav ml-auto text-center camsecdemo">
+					<a href="{%url 'index'%}"><img class="logo-whi d-lg-none d-sm-block ml-auto mr-auto"
 							src="{%static '/images/logoblue.png'%}" style="width: 70%;" alt="logo" /></a>
 					<li class="nav-item ">
-							<a class="nav-link" href="{%url 'company'%}">Company</a>
-						</li>
-						<li class="nav-item ">
-							<a class="nav-link" href="{%url 'consulting'%}">Consulting</a>
-						</li>
-						<li class="nav-item ">
-							<a class="nav-link" href="{%url 'team'%}">Team</a>
-						</li>
-						<li class="nav-item ">
-							<a class="nav-link" href="{%url 'portfolio'%}">Career</a>
-						</li>
-						<li class="nav-item ">
-							<a class="nav-link" href="{%url 'contact'%}">Contact</a>
-						</li>
-						
-					</ul>
-				</div>
-			</nav>
-			<!-- /main nav -->
+						<a class="nav-link" href="{%url 'company'%}">Company</a>
+					</li>
+					<li class="nav-item ">
+						<a class="nav-link" href="{%url 'consulting'%}">Consulting</a>
+					</li>
+					<li class="nav-item ">
+						<a class="nav-link" href="{%url 'team'%}">Team</a>
+					</li>
+					<li class="nav-item ">
+						<a class="nav-link" href="{%url 'portfolio'%}">Career</a>
+					</li>
+					<li class="nav-item ">
+						<a class="nav-link" href="{%url 'contact'%}">Contact</a>
+					</li>
+
+				</ul>
+			</div>
+		</nav>
+		<!-- /main nav -->
 		<!-- </div> -->
 	</header>
 	<!--
 End Fixed Navigation
 ==================================== -->
-
+	<br><br><br><br>
 	<section class="about" id="about">
 		<div class="container">
 			<div class="row">
@@ -142,7 +181,7 @@ End Fixed Navigation
 				<!-- section title -->
 				<div class="col-12">
 					<div class="title text-center ">
-						<h2>Our Team</h2>
+						<h2 data-aos="fade-down">Our Team</h2>
 						<div class="border"></div>
 					</div>
 				</div>
@@ -151,93 +190,79 @@ End Fixed Navigation
 
 				<div class="col-md-6">
 					<!-- <img src="images/about-us.jpg" alt=""> -->
-					<img src="{%static '/images/team/nwteamm.jpg'%}" class="img-fluid"  alt="solvingscal.ai team">
+					<img src="{%static '/images/team/nwteamm.jpg'%}" class="img-fluid" alt="solvingscal.ai team">
 
 				</div>
 				<div class="col-md-6 my-auto">
-					<p style="font-size: 18px;">It takes an incredible team to create something transformative. We have among us curious business
-						developers, smart engineers, <br> creative designers, energetic leaders and <br> a whole bunch of
+					<p style="font-size: 18px;" data-aos="zoom-in" data-aos-duration="1500">It takes an incredible team to create something transformative. We have
+						among us curious business
+						developers, smart engineers, <br> creative designers, energetic leaders and <br> a whole bunch
+						of
 						aspirational individuals. <br> Our Team come from diverse educational and professional
 						backgrounds from prestigious institutes around the world to leading corporates and startups.
 					</p>
-					
+
 				</div>
 			</div> <!-- End row -->
 		</div> <!-- End container -->
 	</section> <!-- End section -->
 
-
-	<section class="section grallery">
-		<div class="container-fluid">
-			<div class="row">
-				<div class="col-md-12">
-					<div class="title text-center">
-						<h2>Sneak Peak Gallery</h2>
-					</div>
-				</div>
+	<br><br>
+	<section class="text-center">
+		<h3>Sneak Peak Gallery</h3>
+	</section>
+	<div class="container">
+		<div class="row">
+			<div class="col"><img src="{%static '/images/team/1.jpeg'%}" width="100%" alt="solvingscale.ai group 1">
 			</div>
-			<div class="row">
-				<div class="col-md-12">
-					<div class="company-gallery">
-						<img src="{%static '/images/team/1.jpeg'%}" alt="solvingscale.ai group 1">
-						<img src="{%static '/images/team/2.jpeg'%}" alt="solvingscale.ai group 2">
-						<img src="{%static '/images/team/3.jpeg'%}" alt="solvingscale.ai group 3">
-						<img src="{%static '/images/team/5.jpeg'%}" alt="solvingscale.ai group 4">
-						
-					</div>
-				</div>
+			<div class="col"><img src="{%static '/images/team/2.jpeg'%}" width="100%" alt="solvingscale.ai group 2">
+			</div>
+			<div class="col"><img src="{%static '/images/team/3.jpeg'%}" width="100%" alt="solvingscale.ai group 3">
+			</div>
+			<div class="col"><img src="{%static '/images/team/5.jpeg'%}" width="100%" alt="solvingscale.ai group 4">
 			</div>
 		</div>
-	</section>
-
-	<footer id="footer" class="bg-one">
-
-
-		<nav class="navbar navbar-expand-lg navbar-light bg-light sticky-bottom">
-			<a class="navbar-brand" href="#">
-				
-				<img class="logo-defau d-none d-lg-block bg-light" src="{%static '/images/logoblue.png'%}" alt="logo" width="150"
-					height="30" class="d-inline-block align-top" loading="lazy" />
-			</a>
-			<div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-				<!-- <a class="navbar-brand" href="#">Hidden brand</a> -->
-				<ul class="navbar-nav mr-auto mt-2 mt-lg-0 ml-auto">
-					<li class="nav-item active">
-						<a class="nav-link" href="{%url 'company'%}">Company </a>
+	</div>
+	
+	<br>
+	<footer class="remove">
+		<div class="row" style="margin-left:  0px; margin-right:0px">
+			<div class="col-md-3">
+				<img src="{%static '/images/logoblue.png'%}" width="150" alt="solvingscale.ai">
+			</div>
+			<div class="col-md-6">
+				<ul class="footer-ul">
+					<li>
+						<a href="{%url 'company'%}">Company </a>
 					</li>
-					<li class="nav-item active">
-						<a class="nav-link" href="{%url 'consulting'%}">Consulting </a>
+					<li>
+						<a href="{%url 'consulting'%}">Consulting </a>
 					</li>
-					<li class="nav-item active">
-						<a class="nav-link" href="{%url 'team'%}">Team </a>
+					<li>
+						<a href="{%url 'team'%}">Team </a>
 					</li>
-					<li class="nav-item active">
-						<a class="nav-link" href="{%url 'portfolio'%}">Career </a>
+					<li>
+						<a href="{%url 'portfolio'%}">Career </a>
 					</li>
-					<li class="nav-item active">
-						<a class="nav-link" href="{%url 'contact'%}">Contact </a>
+					<li>
+						<a href="{%url 'contact'%}">Contact </a>
 					</li>
-					<!-- <li class="nav-item active">
-			<a class="nav-link" href="#">SignIn </a>
-		  </li> -->
-				</ul>
-				<ul class="navbar-nav mt-2 mt-lg-0 ml-auto">
-					<li class="nav-item ">
-						<a class="nav-link" href="https://www.facebook.com/Solving-Scale-AI-100840541958369"><i class="fa fa-facebook-f"></i></a>
-					</li>
-					<li class="nav-item ">
-						<a class="nav-link" href="https://www.linkedin.com/company/solvingscale-ai/"><i class="fa fa-linkedin"></i></a>
-					</li>
-					<li class="nav-item ">
-						<a class="nav-link" href="https://twitter.com/AiScale"><i class="fa fa-twitter"></i></a>
-					</li>
-					<li class="nav-item ">
-						<a class="nav-link" href="https://www.instagram.com/solvingscale.ai/"><i class="fa fa-instagram"></i></a>
-					</li>
-					
 				</ul>
 			</div>
-		</nav>
+			<div class="col-md-3">
+
+				<ul class="social-media">
+					<li><a href="https://www.facebook.com/Solving-Scale-AI-100840541958369"><i class="fa fa-facebook-f"
+								style="color: rgb(104, 100, 100);"></i></a></li>
+					<li><a href="https://www.linkedin.com/company/solvingscale-ai/"><i class="fa fa-linkedin"
+								style="color: rgb(104, 100, 100);"></i></a></li>
+					<li><a href="https://twitter.com/AiScale"><i class="	fa fa-twitter"
+								style="color: rgb(104, 100, 100);"></i></a></li>
+					<li><a href="https://www.instagram.com/solvingscale.ai/"><i class="fa fa-instagram"
+								style="color: rgb(104, 100, 100);"></i></a></li>
+				</ul>
+			</div>
+		</div>
 	</footer>
 
 
@@ -273,7 +298,12 @@ End Fixed Navigation
 	<!-- <script src="{%static '/plugins/smooth-scroll/smooth-scroll.min.js'%}"></script> -->
 
 	<!-- Custom js -->
-	<script src="{%static '/js/script.js'%}"></script><script src="{%static '/js/val.js'%}"></script>
+	<script src="{%static '/js/script.js'%}"></script>
+	<script src="{%static '/js/val.js'%}"></script>
+	<script src="{%static '/js/aos.js'%}"></script>
+	<script>
+		AOS.init();
+	</script>
 
 </body>
 

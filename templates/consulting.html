@@ -8,9 +8,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="Keywords"
         content="AI Solutions, AI in Healthcare, AI in Construction, AI in Retail, AI in Automobile, AI in Customerised Services ">
-    <link rel="stylesheet" href=" {%static '/css/bootstrap.css'%} ">
+
     <link rel="stylesheet" href="{%static '/css/imagetext.css'%}">
-    <link rel="stylesheet" href="{%static '/css/style.css'%}">
+    <!-- <link rel="stylesheet" href="{%static '/css/style.css'%}"> -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="shortcut icon" type="image/x-icon" href="{%static '/images/symb.jpeg'%}" />
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
@@ -25,9 +25,12 @@
     <link rel="shortcut icon" type="image/x-icon" href="{%static '/images/symb.jpeg'%}" />
     <link rel="stylesheet" href="{%static '/css/aos.css'%}">
     <title>Consulting</title>
+    <!-- <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet"> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href=" {%static '/css/bootstrap.css'%} ">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 <style>
     .navbar {
@@ -42,6 +45,7 @@
     .navbar-brand {
         padding: 0px 10px;
     }
+
 
     .content {
 
@@ -155,12 +159,16 @@
     }
 
     .grow {
-        transition: box-shadow 0.5s ease-in-out
+        transition: box-shadow 0.3s ease-in-out;
     }
 
     .grow:hover {
-        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.8);
+        box-shadow: 0 1px 5px rgba(133, 133, 133, 0.9);
 
+    }
+    *{
+
+        font-family: 'Josefin Sans', sans-serif;
     }
 </style>
 {% if message %}
@@ -228,8 +236,7 @@
             <h1 style="font-size:7vh; font-family: 'Josefin Sans', sans-serif;" data-aos="zoom-in"
                 data-aos-duration="2000">Your Business</h1>
             <!-- <h5 >Highly Tailored IT Design, Development & Security Services.</h5><br><br> -->
-            <button id="videobtn" class="btn btn-primary"
-                style="background: linear-gradient(to right, #0066ff 0%, #ff99cc 100%);font-family: 'Josefin Sans', sans-serif;">
+            <button id="videobtn" class="btn btn-outline-warning" style="font-family: 'Josefin Sans', sans-serif;">
                 Free Consultation
             </button>
 
@@ -241,18 +248,19 @@
         <div class="border"></div>
     </div><br>
     <div class="container">
-        <div class="row text-center text-white grow "
-            style="background: linear-gradient(to right, #3366ff 0%, #ff99cc 100%); border-radius: 10px;">
+
+        <div class="row text-center  grow " style=" border-radius: 10px;">
             <div class="col-md-6 my-auto p-5">
                 <i class="fa fa-hospital-o fa-4x" data-aos="fade-down" aria-hidden="true"></i><br> <br>
                 <h4 data-aos="zoom-in" data-aos-duration="1000">HEALTHCARE</h4>
-                <p class="text-white" data-aos="flip-right" data-aos-duration="1000">Health is wealth!. While technology
+                <p class="" data-aos="flip-right" data-aos-duration="1000">Health is wealth!. While technology
                     is getting ubiquitous, and increasing
                     number of patients in
                     hospitals, its hard to take care of the patient and staff of the hospitals. We provide a
                     solution to
                     overcome this problem.</p>
-                <button class="btn btn-outline-light">Know More</button>
+                <button class="btn btn-outline-primary" onclick="location.href = 'healthcare'">Know
+                    More</button>
             </div>
             <div class="col-md-6 my-auto p-3">
                 <video style="width:100%; border-radius: 10px;" autoplay loop muted>
@@ -261,8 +269,9 @@
                 </video>
             </div>
         </div>
-        <div class="row my-5 text-center text-white grow"
-            style="background: linear-gradient(to right, #3366ff 0%, #ff99cc 100%); border-radius: 10px;">
+
+
+        <div class="row my-5 text-center grow" style=" border-radius: 10px;">
             <div class="col-md-6 my-auto p-3">
                 <video style="width:100%; border-radius: 10px;" autoplay loop muted>
                     <source src="{%static '/images/vid1.webm'%}" type="video/webm">
@@ -272,27 +281,27 @@
             <div class="col-md-6 my-auto p-5">
                 <i class="fa fa-building fa-4x" data-aos="fade-down" aria-hidden="true"></i><br> <br>
                 <h4 data-aos="zoom-in" data-aos-duration="1000">CONSTRUCTION </h4>
-                <p class="text-white" data-aos="flip-left" data-aos-duration="1000">Compared to all other job sectors,
+                <p class="" data-aos="flip-left" data-aos-duration="1000">Compared to all other job sectors,
                     construction has the highest number of
                     fatal work injuries. Accidents on construction sites cause thousands of on-the-job injuries and
                     contribute to almost 20 percent of all yearly private industry worker deaths. There are many
                     factors that contribute to construction site injuries and fatalities. The leading causes of
                     worker deaths on construction sites are Falls, Getting struck by an object, Electrocution,
                     Pipefitter Accidents, Equipment failure, etc.</p>
-                <button class="btn btn-outline-light">Know More</button>
+                <button class="btn btn-outline-primary" onclick="location.href = 'construction'">Know More</button>
             </div>
         </div>
-        <div class="row my-5 text-center text-white grow "
-            style="background: linear-gradient(to right, #3366ff 0%, #ff99cc 100%); border-radius: 10px;">
+
+        <div class="row my-5 text-center grow " style=" border-radius: 10px;">
             <div class="col-md-6 my-auto p-5">
                 <i class="fa fa-shopping-cart fa-4x" data-aos="fade-down" aria-hidden="true"></i><br> <br>
                 <h4 data-aos="zoom-in" data-aos-duration="1000">RETAIL </h4>
-                <p class="text-white" data-aos="flip-right" data-aos-duration="1000">Customer satisfaction has always
+                <p class="" data-aos="flip-right" data-aos-duration="1000">Customer satisfaction has always
                     been the priority!. Satisfaction not only
                     include the product quality, but also user experience. We always look to provide that
                     satisfaction. In today's era, user experience is the most important thing matters. We provide an
                     AI solution to overcome security and retail factors .</p>
-                <button class="btn btn-outline-light">Know More</button>
+                <button class="btn btn-outline-primary" onclick="location.href = 'retail'">Know More</button>
             </div>
             <div class="col-md-6 my-auto p-3">
                 <video style="width:100%; border-radius: 10px;" autoplay loop muted>
@@ -301,8 +310,11 @@
                 </video>
             </div>
         </div>
-        <div class="row my-5 text-center text-white grow "
-            style="background: linear-gradient(to right, #3366ff 0%, #ff99cc 100%); border-radius: 10px;">
+        <div class="row">
+            <div class="col-md-3"></div>
+            <div class="col-md-9"></div>
+        </div>
+        <div class="row my-5 text-center grow " style=" border-radius: 10px;">
             <div class="col-md-6 my-auto p-3">
                 <img src="{%static '/images/customized.gif'%}" style="width:100%; border-radius: 10px;"
                     alt="solvingscale.ai customized services">
@@ -311,32 +323,29 @@
 
                 <i class="fa fa-building fa-4x" data-aos="fade-down" aria-hidden="true"></i><br> <br>
                 <h4 data-aos="zoom-in" data-aos-duration="1000">Smart City </h4>
-                <p class="text-white" data-aos="flip-left" data-aos-duration="1000">Innovate a better future...Smarter
+                <p class="" data-aos="flip-left" data-aos-duration="1000">Innovate a better future...Smarter
                     India! TDBians always support things to be smart. By 2050, 70% of global population will live in
                     smart cities. TDB provides a solution to make a city smarter, and secure. Our AI solution consist of
                     Traffic management system, Automatic number plate Recognition, Loitering detection, missing and
                     threattening object detection, Car name and brand recognition, Crowd counting, Face recogntion,
                     Quarrel detection, Fire and smoke detection, Intrusion detection, camera tampering, Fall Detection,
                     etc.</p>
-                <button class="btn btn-outline-light">Know More</button>
+                <button class="btn btn-outline-primary" onclick="location.href = 'smartcity'">Know More</button>
             </div>
         </div>
-        <div class="row my-5 text-center text-white grow "
-            style="background: linear-gradient(to right, #3366ff 0%, #ff99cc 100%); border-radius: 10px;">
+        <div class="row my-5 text-center grow " style=" border-radius: 10px;">
             <div class="col-md-6 my-auto p-3">
-                    <i class="fa fa-car fa-4x" data-aos="fade-down" aria-hidden="true"></i><br> <br>
-                    <h4 data-aos="zoom-in" data-aos-duration="1000">AUTOMOBILE </h4>
-                    <p class="text-white" data-aos="flip-up" data-aos-duration="1000">Nowadays, more and more professions
-                        require long-term concentration. Drivers
-                        must keep a close eye on the road, so they can react to sudden events immediately. Driver
-                        fatigue often becomes a direct cause of many traffic accidents.</p>
-                        <button class="btn btn-outline-light">Know More</button>
-                </div>
-                <div class="col-md-6 my-auto p-3">
-                <img src="{%static '/images/automobile.jpeg'%}" style="width:100%; border-radius: 10px;"
+                <i class="fa fa-car fa-4x" data-aos="fade-down" aria-hidden="true"></i><br> <br>
+                <h4 data-aos="zoom-in" data-aos-duration="1000">AUTOMOBILE </h4>
+                <p class="" data-aos="flip-right" data-aos-duration="1000">Nowadays, more and more professions
+                    require long-term concentration. Drivers
+                    must keep a close eye on the road, so they can react to sudden events immediately. Driver
+                    fatigue often becomes a direct cause of many traffic accidents.</p>
+                <button class="btn btn-outline-primary" onclick="location.href = 'automobile'">Know More</button>
+            </div>
+            <div class="col-md-6 my-auto p-3">
+                <img src="{%static '/images/automobile3.gif'%}" style="width:100%; border-radius: 10px;"
                     alt="solvingscale.ai automobile services">
-
-                
             </div>
         </div>
 
@@ -433,9 +442,8 @@
                                         placeholder="Please describe what you need." id="exampleFormControlTextarea1"
                                         rows="3"></textarea>
                                 </div>
-                                <center><button type="submit"
-                                        style="padding: 10px; background: linear-gradient(to right, #0066ff 0%, #ff99cc 100%);"
-                                        class="btn btn-primary ">Alright
+                                <center><button type="submit" style="padding: 10px;"
+                                        class="btn btn-outline-primary ">Alright
                                         it's Done
                                     </button></center>
                             </form>

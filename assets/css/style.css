@@ -1,5 +1,5 @@
-@import url("https://fonts.googleapis.com/css?family=Catamaran:400,500,600,700,700|Source+Sans+Pro:400,600");
 
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
 
 
 body {
@@ -2406,5 +2406,16 @@ a:focus, a:hover {
   }
 }
 
+*{
+  font-family: 'Josefin Sans', sans-serif !important;
+}
 
+.services-border{
+  border-left: 3px solid;padding:10px; border-image: 
+				linear-gradient(
+				  to bottom, 
+				  #3399ff , 
+				  #ff99cc
+				) 1 100%;
+}
 /*# sourceMappingURL=maps/style.css.map */

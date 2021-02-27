@@ -59,6 +59,28 @@
     .navbar-brand{
         padding: 0px 10px;
     }
+	.footer-ul li a {
+        text-decoration: none;
+        margin: 0px 10px;
+    }
+	.footer-ul li {
+		text-decoration: none;
+        display: inline;
+    }
+	.social-media li {
+		text-decoration: none;
+        display: inline;
+	}
+    .social-media li a {
+        text-decoration: none;
+        margin: 0px 5px;
+    }
+	
+	@media only screen and (max-width: 700px) {
+        .remove {
+            display: none;
+        }
+    }
 </style>
 </head>
 
@@ -204,57 +226,46 @@ End Fixed Navigation
     </div>
   </section>
   <!--====  End  Map  ====-->
-
-  <footer id="footer" class="bg-one">
-
-
-	<nav class="navbar navbar-expand-lg navbar-light bg-light sticky-bottom">
-		<a class="navbar-brand" href="#">
-			
-			<img class="logo-defau d-none d-lg-block bg-light" src="{%static '/images/logoblue.png'%}" alt="solvingscale.ai" width="150"
-				height="30" class="d-inline-block align-top"  loading="lazy" />
-		</a>
-		<div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-			<!-- <a class="navbar-brand" href="#">Hidden brand</a> -->
-			<ul class="navbar-nav mr-auto mt-2 mt-lg-0 ml-auto">
-				<li class="nav-item active">
-					<a class="nav-link" href="{%url 'company'%}">Company </a>
+<br>
+  <footer class="remove">
+	<div class="row" style="margin-left:  0px; margin-right:0px">
+		<div class="col-md-3">
+			<img src="{%static '/images/logoblue.png'%}" width="150" alt="solvingscale.ai">
+		</div>
+		<div class="col-md-6">
+			<ul class="footer-ul">
+				<li>
+					<a href="{%url 'company'%}">Company </a>
 				</li>
-				<li class="nav-item active">
-					<a class="nav-link" href="{%url 'consulting'%}">Consulting </a>
+				<li>
+					<a href="{%url 'consulting'%}">Consulting </a>
 				</li>
-				<li class="nav-item active">
-					<a class="nav-link" href="{%url 'team'%}">Team </a>
+				<li>
+					<a href="{%url 'team'%}">Team </a>
 				</li>
-				<li class="nav-item active">
-					<a class="nav-link" href="{%url 'portfolio'%}">Career </a>
+				<li>
+					<a href="{%url 'portfolio'%}">Career </a>
 				</li>
-				<li class="nav-item active">
-					<a class="nav-link" href="{%url 'contact'%}">Contact </a>
+				<li>
+					<a href="{%url 'contact'%}">Contact </a>
 				</li>
-				<!-- <li class="nav-item active">
-		<a class="nav-link" href="#">SignIn </a>
-	  </li> -->
-			</ul>
-			<ul class="navbar-nav mt-2 mt-lg-0 ml-auto">
-				<li class="nav-item ">
-					<a class="nav-link" href="https://www.facebook.com/Solving-Scale-AI-100840541958369"><i class="fa fa-facebook-f"></i></a>
-				</li>
-				<li class="nav-item ">
-					<a class="nav-link" href="https://www.linkedin.com/company/solvingscale-ai/"><i class="fa fa-linkedin"></i></a>
-				</li>
-				<li class="nav-item ">
-					<a class="nav-link" href="https://twitter.com/AiScale"><i class="fa fa-twitter"></i></a>
-				</li>
-				<li class="nav-item ">
-					<a class="nav-link" href="https://www.instagram.com/solvingscale.ai/"><i class="fa fa-instagram"></i></a>
-				</li>
-				
 			</ul>
 		</div>
-	</nav>
-</footer>
+		<div class="col-md-3">
 
+			<ul class="social-media">
+				<li><a href="https://www.facebook.com/Solving-Scale-AI-100840541958369"><i class="fa fa-facebook-f"
+							style="color: rgb(104, 100, 100);"></i></a></li>
+				<li><a href="https://www.linkedin.com/company/solvingscale-ai/"><i class="fa fa-linkedin"
+							style="color: rgb(104, 100, 100);"></i></a></li>
+				<li><a href="https://twitter.com/AiScale"><i class="	fa fa-twitter"
+							style="color: rgb(104, 100, 100);"></i></a></li>
+				<li><a href="https://www.instagram.com/solvingscale.ai/"><i class="fa fa-instagram"
+							style="color: rgb(104, 100, 100);"></i></a></li>
+			</ul>
+		</div>
+	</div>
+</footer>
 
 <!-- end Footer Area
 ========================================== -->
