@@ -83,8 +83,8 @@
     }
 
     .showcase {
-       /* box-shadow: 50px 10px #cac9c9;*/
-      /*  box-shadow: 0 0 25px 0 rgba(50, 50, 50, .3) inset;*/
+        /* box-shadow: 50px 10px #cac9c9;*/
+        /*  box-shadow: 0 0 25px 0 rgba(50, 50, 50, .3) inset;*/
     }
 
     .formdiv {
@@ -172,11 +172,14 @@
         font-family: 'Josefin Sans', sans-serif;
     }
 </style>
-{% if message %}
+<!-- {% if messages %}
+{% for message in messages %}
+
 <script>
-    alert("{{message}}")
+    alert("{{messages.success}}")
 </script>
-{% endif %}
+{% endfor %}
+{% endif %} -->
 
 <body>
 
@@ -224,6 +227,7 @@
         <!-- /main nav -->
         <!-- </div> -->
     </header>
+
     <section class="showcase">
         <div class="video-container clip">
 
@@ -231,6 +235,13 @@
                 alt="solvingscale.ai banner">
 
         </div>
+        {% if messages %}
+        {% for message in messages  %}
+        <div style="position: absolute; top:12%; z-index: 1000;" class="alert alert-success" role="alert">
+            {{message}}
+        </div>
+        {% endfor %}
+        {% endif %}
         <div class="content ">
             <h4 style="font-family: 'Josefin Sans', sans-serif;" data-aos="fade-down" data-aos-duration="1000">Business
                 in today's world is dominated by the era of data</h4>
@@ -240,19 +251,20 @@
             <button id="videobtn" class="btn btn-warning" style="font-family: 'Josefin Sans', sans-serif;">
                 Get Free consulation Now
             </button>
-            <button class="btn btn-outline-warning" onclick="location.href='#industry'" style="font-family: 'Josefin Sans', sans-serif;">
+            <button class="btn btn-outline-warning industry " id="industry"
+                style="font-family: 'Josefin Sans', sans-serif;">
                 Know Your Industry
             </button>
 
         </div>
     </section><br>
 
-    <div class="text-center my-4">
+    <div class="text-center my-4 ">
         <h1 data-aos="fade-down ">Businesses That have Transformed Operations with AI </h1>
         <br>
         <div class="border"></div>
     </div>
-    <div class="container" id="industry">
+    <div class="container ">
 
         <div class="row text-center  grow " style=" border-radius: 10px;">
             <div class="col-md-6 my-auto p-5">
@@ -338,6 +350,7 @@
                 <button class="btn btn-outline-primary" onclick="location.href = 'smartcity'">Know More</button>
             </div>
         </div>
+
         <div class="row my-5 text-center grow " style=" border-radius: 10px;">
             <div class="col-md-6 my-auto p-3">
                 <i class="fa fa-car fa-4x" data-aos="fade-down" aria-hidden="true"></i><br> <br>
@@ -508,6 +521,15 @@
                 scrollTop: $(".second").offset().top
             },
             'slow');
+    });
+    $("#industry").click(function () {
+        $('html,body').animate({
+                scrollTop: $(".industry").offset().top
+            },
+            'slow');
+    });
+    $(".alert").delay(4000).slideUp(200, function () {
+        $(this).alert('close');
     });
     AOS.init();
 </script>

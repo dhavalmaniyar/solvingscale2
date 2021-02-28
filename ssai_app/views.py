@@ -1,9 +1,11 @@
-from django.shortcuts import render
+from django.http.response import HttpResponseRedirect
+from django.shortcuts import redirect, render
 from . models import Inquiry,User,UserCount,Snippet
 from django.core.mail import send_mail
 from django.db.models import Q
 from django.shortcuts import get_object_or_404
 from django.http import HttpResponse
+from django.contrib import messages
 # Create your views here.
 
 def index(request):
@@ -54,15 +56,17 @@ def submit(request):
     mobile=request.POST['mobile']
     email=request.POST['email']
     inquiry=request.POST['inquiry']
-    pay=request.POST['pay']
+    # pay=request.POST['pay']
     need=request.POST['need']
-    data=Inquiry(name=name,mobile=mobile,email=email,inquiry=inquiry,pay=pay,need=need)
+    data=Inquiry(name=name,mobile=mobile,email=email,inquiry=inquiry,need=need)
     data.save()
     subject = 'Free Consultation Inquiry'
-    message = 'name: '+name+'\nmobile: '+mobile+'\nemail: '+email+'\nInquiry: '+inquiry+'\nReady to Pay: '+pay+'\nRequirements: '+need
-    send_mail(subject, 
-            message,'infosolvingscale@gmail.com', ['infosolvingscale@gmail.com'], fail_silently = False)
-    return render(request,'consulting.html',{'message':"Thank You, we will contact you soon"})
+    emailmessage = 'name: '+name+'\nmobile: '+mobile+'\nemail: '+email+'\nInquiry: '+inquiry+'\nRequirements: '+need
+    messages.success(request,'Thank You, we will contact you soon')
+    # send_mail(subject, 
+    #         message,'infosolvingscale@gmail.com', ['infosolvingscale@gmail.com'], fail_silently = False)
+    # return render(request,'consulting.html',{'message':"Thank You, we will contact you soon"})
+    return redirect('consulting')
 
 
 def snippet_detail(request, slug):

@@ -6,11 +6,14 @@
 <html>
 <!--<![endif]-->
 {% load static %}
+
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-	<meta name="title" content="Contact Details: 615, Apollo Premier, Vijay Nagar Square, Indore, Madhya Pradesh, India, 452001" >
+	<meta name="title"
+		content="Contact Details: 615, Apollo Premier, Vijay Nagar Square, Indore, Madhya Pradesh, India, 452001">
 	<meta name="description" content="For more details about our company please contact @ info@solvingscale.ai">
-<meta name="keywords" content="Contact us, AI company, ai solutions,face recogition,attendance management system, ERP, computer vision syndrome.">
+	<meta name="keywords"
+		content="Contact us, AI company, ai solutions,face recogition,attendance management system, ERP, computer vision syndrome.">
 	<meta name="author" content="solvingscaleAi">
 
 	<title>Solving Scale AI</title>
@@ -39,52 +42,106 @@
 	<!-- font icon -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-LVV5M06YY7"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-LVV5M06YY7"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
 
-  gtag('config', 'G-LVV5M06YY7');
-</script>
-<style>
-	.navbar {
-        position: fixed;
-        z-index: 1000;
-        left: 0;
-        right: 0;
-        padding: 8px;
+		function gtag() {
+			dataLayer.push(arguments);
+		}
+		gtag('js', new Date());
 
-    }
-    .navbar-brand{
-        padding: 0px 10px;
-    }
-	.footer-ul li a {
-        text-decoration: none;
-        margin: 0px 10px;
-    }
-	.footer-ul li {
-		text-decoration: none;
-        display: inline;
-    }
-	.social-media li {
-		text-decoration: none;
-        display: inline;
-	}
-    .social-media li a {
-        text-decoration: none;
-        margin: 0px 5px;
-    }
-	
-	@media only screen and (max-width: 700px) {
-        .remove {
-            display: none;
-        }
-    }
-	ul li{
-		font-family: 'Josefin Sans', sans-serif !important;
-	}
-</style>
+		gtag('config', 'G-LVV5M06YY7');
+	</script>
+	<style>
+		.navbar {
+			position: fixed;
+			z-index: 1000;
+			left: 0;
+			right: 0;
+			padding: 8px;
+
+		}
+
+		.navbar-brand {
+			padding: 0px 10px;
+		}
+
+		.footer-ul li a {
+			text-decoration: none;
+			margin: 0px 10px;
+		}
+
+		.footer-ul li {
+			text-decoration: none;
+			display: inline;
+		}
+
+		.social-media li {
+			text-decoration: none;
+			display: inline;
+		}
+
+		.social-media li a {
+			text-decoration: none;
+			margin: 0px 5px;
+		}
+
+		.switch-field {
+
+			margin-bottom: 36px;
+			overflow: hidden;
+
+		}
+
+		.switch-field input {
+			position: absolute !important;
+			clip: rect(0, 0, 0, 0);
+			height: 1px;
+			width: 1px;
+			border: 0;
+			overflow: hidden;
+		}
+
+		.switch-field label {
+			font-size: 14px;
+			line-height: 1;
+			text-align: center;
+			padding: 8px 16px;
+			margin-right: -1px;
+			border-bottom: 4px solid rgba(0, 0, 0, 0.2);
+			border-radius: 2px;
+			
+		}
+
+
+		.switch-field label:hover {
+			cursor: pointer;
+		}
+
+		.switch-field input:checked+label {
+			border-color: rgb(78, 167, 250);
+			box-shadow: none;
+		}
+
+		.indore {
+			display: none;
+		}
+
+		.icon-size {
+			width: 20px;
+		}
+
+		@media only screen and (max-width: 700px) {
+			.remove {
+				display: none;
+			}
+		}
+
+		ul li {
+			font-family: 'Josefin Sans', sans-serif !important;
+		}
+	</style>
 </head>
 
 <body id="body">
@@ -114,196 +171,254 @@ Fixed Navigation
 ==================================== -->
 	<header class="navigation fixed-top">
 		<!-- <div class="container"> -->
-			<!-- main nav -->
-			<nav class="navbar navbar-expand-lg navbar-ligh bg-light">
-				<!-- logo -->
-				<a class="navbar-brand d-inline-block align-top " href="{%url 'index'%}">
-					<img class="logo-defau d-none d-lg-block bg-light" src="{%static '/images/symb.jpeg'%}" alt="solvingscale.ai" title="solvingscale.ai" style="width: 40%;border-radius: 50%;" />
-				</a>
-				<!-- <a href="" class="d-none d-lg-block ml-auto"><span >SolvingScaleAI</span></a> -->
-				<!-- /logo -->
-				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation"
-					aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
-					<i class="fa fa-bars" aria-hidden="true"></i>
+		<!-- main nav -->
+		<nav class="navbar navbar-expand-lg navbar-ligh bg-light">
+			<!-- logo -->
+			<a class="navbar-brand d-inline-block align-top " href="{%url 'index'%}">
+				<img class="logo-defau d-none d-lg-block bg-light" src="{%static '/images/symb.jpeg'%}"
+					alt="solvingscale.ai" title="solvingscale.ai" style="width: 40%;border-radius: 50%;" />
+			</a>
+			<!-- <a href="" class="d-none d-lg-block ml-auto"><span >SolvingScaleAI</span></a> -->
+			<!-- /logo -->
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation"
+				aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
+				<i class="fa fa-bars" aria-hidden="true"></i>
 
-				</button>
+			</button>
 
-				<div class="collapse navbar-collapse" id="navigation">
-					<ul class="navbar-nav ml-auto text-center camsecdemo">
-						<a href="{%url 'index'%}"><img class="logo-whi d-lg-none d-sm-block ml-auto mr-auto"
-							src="{%static '/images/logoblue.png'%}" style="width: 70%;" alt="solvingscale.ai" /></a>	
+			<div class="collapse navbar-collapse" id="navigation">
+				<ul class="navbar-nav ml-auto text-center camsecdemo">
+					<a href="{%url 'index'%}"><img class="logo-whi d-lg-none d-sm-block ml-auto mr-auto"
+							src="{%static '/images/logoblue.png'%}" style="width: 70%;" alt="solvingscale.ai" /></a>
 					<li class="nav-item ">
-							<a class="nav-link" href="{%url 'company'%}">Company</a>
-						</li>
-						<li class="nav-item ">
-							<a class="nav-link" href="{%url 'consulting'%}">Consulting</a>
-						</li>
-						<li class="nav-item ">
-							<a class="nav-link" href="{%url 'team'%}">Team</a>
-						</li>
-						<li class="nav-item ">
-							<a class="nav-link" href="{%url 'portfolio'%}">Career</a>
-						</li>
-						<li class="nav-item ">
-							<a class="nav-link" href="{%url 'contact'%}">Contact</a>
-						</li>
-						
-					</ul>
-				</div>
-			</nav>
-			<!-- /main nav -->
+						<a class="nav-link" href="{%url 'company'%}">Company</a>
+					</li>
+					<li class="nav-item ">
+						<a class="nav-link" href="{%url 'consulting'%}">Consulting</a>
+					</li>
+					<li class="nav-item ">
+						<a class="nav-link" href="{%url 'team'%}">Team</a>
+					</li>
+					<li class="nav-item ">
+						<a class="nav-link" href="{%url 'portfolio'%}">Career</a>
+					</li>
+					<li class="nav-item ">
+						<a class="nav-link" href="{%url 'contact'%}">Contact</a>
+					</li>
+
+				</ul>
+			</div>
+		</nav>
+		<!-- /main nav -->
 		<!-- </div> -->
 	</header>
 	<!--
 End Fixed Navigation
 ==================================== -->
 
-  <section class="single-page-header">
-    <div class="container">
-      <div class="row">
-        <!-- section title -->
-        <div class="col-12">
-          <div class="title text-center">
-            <h2 class="text-light" style="font-family: 'Josefin Sans', sans-serif !important;">Get In Touch</h2>
-            <p class="text-light" style="font-family: 'Josefin Sans', sans-serif !important;">We’re happy to hear from you. Contact us today to learn more about us and how you can benefit from working with us.</p>
-            <div class="border"></div>
-          </div>
-        </div>
-        <!-- /section title -->
-      </div>
-    </div>
-  </section>
+	<section class="single-page-header">
+		<div class="container">
+			<div class="row">
+				<!-- section title -->
+				<div class="col-12">
+					<div class="title text-center">
+						<h2 class="text-light" style="font-family: 'Josefin Sans', sans-serif !important;">Get In Touch
+						</h2>
+						<p class="text-light" style="font-family: 'Josefin Sans', sans-serif !important;">We’re happy to
+							hear from you. Contact us today to learn more about us and how you can benefit from working
+							with us.</p>
+						<div class="border"></div>
+					</div>
+				</div>
+				<!-- /section title -->
+			</div>
+		</div>
+	</section>
 
-  <!--Start Contact Us
+	<!--Start Contact Us
 	=========================================== -->
-  <section class="contact-us" id="contact">
-    <div class="container">
-      <div class="row">
+	<br><br>
+	<div class="container">
 
 
+		<div class="row"
+			style="   padding: 10px;border-radius: 10px;">
+			<div class="col-md-6">
+				<div class="switch-field text-center ">
+					<input type="radio" id="radio-one" name="switch-one" value="1" checked />
+					<label for="radio-one">Hyderabad Office</label>
+					<input type="radio" id="radio-two" name="switch-one" value="2" />
+					<label for="radio-two">Indore Office</label>
+				</div>
+				<div class="row hyderabad">
+					<div class="col-2 text-right"><img src="{%static '/images/icons/email.png'%}" class="icon-size"
+							alt="">
+					</div>
+					<div class="col">
+						<p> hello@solvingscale.ai</p>
+					</div>
+				</div>
+				<div class="row hyderabad">
+					<div class="col-2 text-right"><img src="{%static '/images/icons/address.png'%}" class="icon-size"
+							alt="">
+					</div>
+					<div class="col">
+						2nd Floor, Adviti Nivas PLOT - 26, near RTO Office,
+						Chandragiri
+						Colony, Trimulgherry, Secunderabad, Telangana 500015
+					</div>
+				</div>
+				<div class="row hyderabad">
+					<div class="col-2 text-right"><img src="{%static '/images/icons/phone-call.png'%}" class="icon-size"
+							alt="">
+					</div>
+					<div class="col ">
+						+91-7507898930
+					</div>
+				</div>
+				<!-- INDORE -->
+				<div class="row indore">
+					<div class="col-2 text-right"><img src="{%static '/images/icons/email.png'%}" class="icon-size"
+							alt="">
+					</div>
+					<div class="col">
+						<p> hello@solvingscale.ai</p>
+					</div>
+				</div>
+				<div class="row indore">
+					<div class="col-2 text-right"><img src="{%static '/images/icons/address.png'%}" class="icon-size"
+							alt="">
+					</div>
+					<div class="col">
+						615, Apollo Premier, Vijay Nagar Sqaure, Indore, Madhya
+						pradesh, India, 452001 &nbsp; &nbsp; &nbsp;
+					</div>
+				</div>
+				<div class="row indore">
+					<div class="col-2 text-right"><img src="{%static '/images/icons/phone-call.png'%}" class="icon-size"
+							alt="">
+					</div>
+					<div class="col ">
+						+91-7313510004
+					</div>
+				</div>
+			</div>
 
-        <!-- Contact Details -->
-        <div class="contact-details col-md-12 ">
-          <h3 style="font-family: 'Josefin Sans', sans-serif !important;">Contact Details</h3>
-          <!-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam, vero, provident, eum eligendi blanditiis ex explicabo vitae nostrum facilis asperiores dolorem illo officiis ratione vel fugiat dicta laboriosam labore adipisci.</p> -->
-          <ul class="contact-short-info">
-            <li>
-				<i class="tf-ion-ios-home">Indore-Address: <br></i>
-			  <span style="font-family: 'Josefin Sans', sans-serif !important;"> 615, Apollo Premier, Vijay Nagar Sqaure, Indore, Madhya pradesh, India, 452001</span><br>
-			  <i class="tf-ion-ios-home">Hyderabad-Address: <br></i>
-			  <span style="font-family: 'Josefin Sans', sans-serif !important;">2nd Floor, Adviti NIvas PLOT - 26, near RTO Office, Chandragiri Colony, Trimulgherry, Secunderabad, Telangana 500015</span>
-            </li>
-            <li>
-              <i class="tf-ion-android-phone-portrait"></i>
-              <span>Phone:  +91-7507898930</span>
-            </li>
-            <!-- <li>
-              <i class="tf-ion-android-globe"></i>
-              <span>Fax: +91 89282982982</span>
-            </li> -->
-            <li>
-              <i class="tf-ion-android-mail"></i>
-              <span>Email: info@solvingscale.ai</span>
-            </li>
-          </ul>
-
-        </div>
-        <!-- / End Contact Details -->
-
-        <!-- <div class="contact-details col-md-6 " >
-        helo
-      </div> -->
-
-      </div> <!-- end row -->
-    </div> <!-- end container -->
-  </section> <!-- end section -->
-
-  <!--Google Map-->
-  <section class="map" >
-    <!-- Google Map -->
-    <div id="">
-      <iframe
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3679.422487625937!2d75.89437955004446!3d22.749697132107972!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3962fd697b42adf5%3A0x8d0d127bb95b4e3b!2sRegus%20-%20Indore%2C%20Apollo!5e0!3m2!1sen!2sin!4v1609071967376!5m2!1sen!2sin"
-        width="100%" height="400" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false"
-        tabindex="0" ></iframe>
-    </div>
-  </section>
-  <!--====  End  Map  ====-->
-<br>
-  <footer class="remove">
-	<div class="row" style="margin-left:  0px; margin-right:0px">
-		<div class="col-md-3">
-			<img src="{%static '/images/logoblue.png'%}" width="150" alt="solvingscale.ai">
-		</div>
-		<div class="col-md-6">
-			<ul class="footer-ul">
-				<li>
-					<a href="{%url 'company'%}">Company </a>
-				</li>
-				<li>
-					<a href="{%url 'consulting'%}">Consulting </a>
-				</li>
-				<li>
-					<a href="{%url 'team'%}">Team </a>
-				</li>
-				<li>
-					<a href="{%url 'portfolio'%}">Career </a>
-				</li>
-				<li>
-					<a href="{%url 'contact'%}">Contact </a>
-				</li>
-			</ul>
-		</div>
-		<div class="col-md-3">
-
-			<ul class="social-media">
-				<li><a href="https://www.facebook.com/Solving-Scale-AI-100840541958369"><i class="fa fa-facebook-f"
-							style="color: rgb(104, 100, 100);"></i></a></li>
-				<li><a href="https://www.linkedin.com/company/solvingscale-ai/"><i class="fa fa-linkedin"
-							style="color: rgb(104, 100, 100);"></i></a></li>
-				<li><a href="https://twitter.com/AiScale"><i class="	fa fa-twitter"
-							style="color: rgb(104, 100, 100);"></i></a></li>
-				<li><a href="https://www.instagram.com/solvingscale.ai/"><i class="fa fa-instagram"
-							style="color: rgb(104, 100, 100);"></i></a></li>
-			</ul>
+			<div class="col-md-6">
+				<div class="indore" class="card" style="width: 100%; height: 100%;">
+					<div class="card-body">
+						<iframe
+							src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3679.457185280489!2d75.89182471496274!3d22.74840858509263!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3962fde29067a05b%3A0x8becd85ff0793cad!2sTech%20Driven%20Basic%20(TDB.AI)!5e0!3m2!1sen!2sin!4v1611639635852!5m2!1sen!2sin"
+							width="100%" height="100%" frameborder="0" style="border:0;" allowfullscreen=""
+							aria-hidden="false" tabindex="0"></iframe>
+					</div>
+				</div>
+				<div class="hyderabad" class="card" style="width: 100%; height: 100%;">
+					<div class="card-body">
+						<iframe
+							src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3805.861083484804!2d78.5053892!3d17.4663618!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb997deea44453%3A0x711962286c3e4ce8!2sVeloxtech%20Solutions!5e0!3m2!1sen!2sin!4v1611638625149!5m2!1sen!2sin"
+							width="100%" height="100%" frameborder="0" style="border:0;" allowfullscreen=""
+							aria-hidden="false" tabindex="0"></iframe>
+					</div>
+				</div>
+			</div>
 		</div>
 	</div>
-</footer>
+	<!--====  End  Map  ====-->
+	<br><br>
+	<footer class="remove">
+		<div class="row" style="margin-left:  0px; margin-right:0px">
+			<div class="col-md-3">
+				<img src="{%static '/images/logoblue.png'%}" width="150" alt="solvingscale.ai">
+			</div>
+			<div class="col-md-6">
+				<ul class="footer-ul">
+					<li>
+						<a href="{%url 'company'%}">Company </a>
+					</li>
+					<li>
+						<a href="{%url 'consulting'%}">Consulting </a>
+					</li>
+					<li>
+						<a href="{%url 'team'%}">Team </a>
+					</li>
+					<li>
+						<a href="{%url 'portfolio'%}">Career </a>
+					</li>
+					<li>
+						<a href="{%url 'contact'%}">Contact </a>
+					</li>
+				</ul>
+			</div>
+			<div class="col-md-3">
 
-<!-- end Footer Area
+				<ul class="social-media">
+					<li><a href="https://www.facebook.com/Solving-Scale-AI-100840541958369"><i class="fa fa-facebook-f"
+								style="color: rgb(104, 100, 100);"></i></a></li>
+					<li><a href="https://www.linkedin.com/company/solvingscale-ai/"><i class="fa fa-linkedin"
+								style="color: rgb(104, 100, 100);"></i></a></li>
+					<li><a href="https://twitter.com/AiScale"><i class="	fa fa-twitter"
+								style="color: rgb(104, 100, 100);"></i></a></li>
+					<li><a href="https://www.instagram.com/solvingscale.ai/"><i class="fa fa-instagram"
+								style="color: rgb(104, 100, 100);"></i></a></li>
+				</ul>
+			</div>
+		</div>
+	</footer>
+
+	<!-- end Footer Area
 ========================================== -->
 
 
 
-<!-- 
+	<!-- 
 Essential Scripts
 =====================================-->
-<!-- Main jQuery -->
-<script src="{%static '/plugins/jquery/jquery.min.js'%}"></script>
-<!-- Google Map -->
-<!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBu5nZKbeK-WHQ70oqOWo-_4VmwOwKP9YQ"></script> -->
-<!-- <script src="{%static '/plugins/google-map/gmap.js'%}"></script> -->
+	<!-- Main jQuery -->
+	<script src="{%static '/plugins/jquery/jquery.min.js'%}"></script>
+	<!-- Google Map -->
+	<!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBu5nZKbeK-WHQ70oqOWo-_4VmwOwKP9YQ"></script> -->
+	<!-- <script src="{%static '/plugins/google-map/gmap.js'%}"></script> -->
 
-<!-- Form Validation -->
-<!-- <script src="{%static '/plugins/form-validation/jquery.form.js'%}"></script> -->
-<!-- <script src="{%static '/plugins/form-validation/jquery.validate.min.js'%}"></script> -->
+	<!-- Form Validation -->
+	<!-- <script src="{%static '/plugins/form-validation/jquery.form.js'%}"></script> -->
+	<!-- <script src="{%static '/plugins/form-validation/jquery.validate.min.js'%}"></script> -->
 
-<!-- Bootstrap4 -->
-<script src="{%static '/plugins/bootstrap/js/bootstrap.min.js'%}"></script>
-<!-- Parallax -->
-<!-- <script src="{%static '/plugins/parallax/jquery.parallax-1.1.3.js'%}"></script> -->
-<!-- lightbox -->
-<!-- <script src="{%static '/plugins/lightbox2/dist/js/lightbox.min.js'%}"></script> -->
-<!-- Owl Carousel -->
-<!-- <script src="{%static '/plugins/slick/slick.min.js'%}"></script> -->
-<!-- filter -->
-<!-- <script src="{%static '/plugins/filterizr/jquery.filterizr.min.js'%}"></script> -->
-<!-- Smooth Scroll js -->
-<!-- <script src="{%static '/plugins/smooth-scroll/smooth-scroll.min.js'%}"></script> -->
+	<!-- Bootstrap4 -->
+	<script src="{%static '/plugins/bootstrap/js/bootstrap.min.js'%}"></script>
+	<!-- Parallax -->
+	<!-- <script src="{%static '/plugins/parallax/jquery.parallax-1.1.3.js'%}"></script> -->
+	<!-- lightbox -->
+	<!-- <script src="{%static '/plugins/lightbox2/dist/js/lightbox.min.js'%}"></script> -->
+	<!-- Owl Carousel -->
+	<!-- <script src="{%static '/plugins/slick/slick.min.js'%}"></script> -->
+	<!-- filter -->
+	<!-- <script src="{%static '/plugins/filterizr/jquery.filterizr.min.js'%}"></script> -->
+	<!-- Smooth Scroll js -->
+	<!-- <script src="{%static '/plugins/smooth-scroll/smooth-scroll.min.js'%}"></script> -->
 
-<!-- Custom js -->
-<script src="{%static '/js/script.js'%}"></script><script src="{%static '/js/val.js'%}"></script>
+	<!-- Custom js -->
+	<script src="{%static '/js/script.js'%}"></script>
+	<script src="{%static '/js/val.js'%}"></script>
+	<script>
+		$(document).ready(function () {
+			$('input[name=switch-one]').on('change', function () {
+				var n = $(this).val();
+				switch (n) {
+					case '1':
+						$('.indore').hide();
+						$('.hyderabad').show();
 
+						break;
+					case '2':
+						$('.hyderabad').hide();
+						$('.indore').show();
+						$('.indore').css("display", "flex");
+						break;
+				}
+			});
+		});
+	</script>
 </body>
 
 </html>

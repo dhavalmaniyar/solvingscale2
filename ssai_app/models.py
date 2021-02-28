@@ -9,7 +9,7 @@ class Inquiry(models.Model):
     mobile=models.IntegerField()
     email=models.EmailField(max_length=256)
     inquiry=models.CharField(max_length=50)
-    pay=models.CharField(max_length=100)
+    # pay=models.CharField(max_length=100)
     need=models.TextField()
     date=models.DateField(default=timezone.now())
 
