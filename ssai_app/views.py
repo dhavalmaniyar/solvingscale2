@@ -63,9 +63,7 @@ def submit(request):
     subject = 'Free Consultation Inquiry'
     emailmessage = 'name: '+name+'\nmobile: '+mobile+'\nemail: '+email+'\nInquiry: '+inquiry+'\nRequirements: '+need
     messages.success(request,'Thank You, we will contact you soon')
-    # send_mail(subject, 
-    #         message,'infosolvingscale@gmail.com', ['infosolvingscale@gmail.com'], fail_silently = False)
-    # return render(request,'consulting.html',{'message':"Thank You, we will contact you soon"})
+    # render(request,'consulting.html',{'message':"Thank You, we will contact you soon"})
     return redirect('consulting')
 
 
